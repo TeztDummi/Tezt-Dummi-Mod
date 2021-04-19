@@ -1,0 +1,43 @@
+{
+  "_fv": 13,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "ztezt_dummi_cannon",
+    "customModelName": "Normal",
+    "name": "Tezt Dummi Cannon",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:TeztyArrow"
+    },
+    "shootConstantly": false,
+    "usageCount": 1000,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 0.5,
+    "bulletDamage": 15.0,
+    "bulletKnockback": 15,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelcustom_model",
+    "customBulletModelTexture": "tezt_dummi_skin.png",
+    "onBulletHitsBlock": {
+      "name": "TeztDummiCannonBulletHitsBlock"
+    },
+    "onBulletHitsEntity": {
+      "name": "TeztDummiCannonBulletHitsLivingEntity"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tezt_dummi_mod:tezt_dummi_essence_block"
+    }
+  ],
+  "result": {
+    "item": "tezt_dummi_mod:tezt_dummi_essence_dust",
+    "count": 9
+  }
+}

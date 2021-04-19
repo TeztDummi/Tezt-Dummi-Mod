@@ -1,0 +1,26 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:tezty_rock"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:tezty_rock"
+    },
+    "2": {
+      "item": "tezt_dummi_mod:tezty_rock"
+    },
+    "3": {
+      "item": "tezt_dummi_mod:tezty_rock"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:tezty_rock_brick",
+    "count": 4
+  }
+}

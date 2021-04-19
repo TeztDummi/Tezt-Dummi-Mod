@@ -1,0 +1,16 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:teztanium_ingot"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:teztanium",
+    "count": 2
+  }
+}

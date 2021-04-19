@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "tezt_dummi_mod:block/dummi_dimension_portal_ew"
+    },
+    "axis=x": {
+      "model": "tezt_dummi_mod:block/dummi_dimension_portal_ns"
+    }
+  }
+}

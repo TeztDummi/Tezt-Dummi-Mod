@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 3,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:TeztyLog"
+      },
+      {
+        "value": "CUSTOM:TeztyLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:TeztyLog"
+      },
+      {
+        "value": "CUSTOM:TeztyLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TeztyWood"
+    },
+    "name": "tezty_wood_recipe",
+    "namespace": "mod"
+  }
+}

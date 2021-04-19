@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/tezty_log_side",
+    "particle": "tezt_dummi_mod:blocks/tezty_log_side"
+  }
+}

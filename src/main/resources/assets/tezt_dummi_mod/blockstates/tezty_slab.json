@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tezt_dummi_mod:block/tezty_slab"
+    },
+    "type=top": {
+      "model": "tezt_dummi_mod:block/tezty_slab_top"
+    },
+    "type=double": {
+      "model": "tezt_dummi_mod:block/tezty_slab_full"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/teztanium_block_new",
+    "particle": "tezt_dummi_mod:blocks/teztanium_block_new"
+  }
+}

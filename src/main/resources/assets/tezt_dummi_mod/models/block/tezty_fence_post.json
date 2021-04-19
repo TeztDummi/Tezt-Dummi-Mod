@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "tezt_dummi_mod:blocks/tezty_planks",
+    "particle": "tezt_dummi_mod:blocks/tezty_planks"
+  }
+}

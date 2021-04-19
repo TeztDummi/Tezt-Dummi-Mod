@@ -1,0 +1,42 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "2": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "3": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "4": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "5": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "6": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "7": {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    "8": {
+      "item": "tezt_dummi_mod:teztanium"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:teztanium_block",
+    "count": 1
+  }
+}
