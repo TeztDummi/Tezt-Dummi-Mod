@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -47,6 +48,14 @@ public class TeztDummiModModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public TeztDummiModModElements() {
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummideath"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummideath")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummihurt"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummihurt")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdumminutural"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdumminutural")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummihaha"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummihaha")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("tezt_dummi_mod").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
@@ -62,6 +71,7 @@ public class TeztDummiModModElements {
 		}
 		Collections.sort(elements);
 		elements.forEach(TeztDummiModModElements.ModElement::initElements);
+		MinecraftForge.EVENT_BUS.register(new TeztDummiModModVariables(this));
 	}
 
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {

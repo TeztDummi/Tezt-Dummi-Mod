@@ -8,7 +8,7 @@
     "name": "Tezt Rocket",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "stackSize": 64,
     "enchantability": 0,

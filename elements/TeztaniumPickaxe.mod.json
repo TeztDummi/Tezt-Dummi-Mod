@@ -8,10 +8,10 @@
     "name": "Teztanium Pickaxe",
     "specialInfo": [],
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "toolType": "Pickaxe",
-    "harvestLevel": 1,
+    "harvestLevel": 5,
     "efficiency": 12.0,
     "attackSpeed": 1.0,
     "enchantability": 25,

@@ -8,7 +8,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
@@ -18,6 +17,7 @@ import net.minecraft.block.FenceBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 import java.util.List;
@@ -35,7 +35,7 @@ public class TeztyFenceBlock extends TeztDummiModModElements.ModElement {
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+				.add(() -> new BlockItem(block, new Item.Properties().group(TeztDummiModItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {

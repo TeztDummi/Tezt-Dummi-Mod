@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "tezt_dummi_mod:teztanium_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.cover_me_in_tezt_dummi.title"
+    },
+    "description": {
+      "translate": "advancements.cover_me_in_tezt_dummi.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cover_me_in_tezt_dummi": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "tezt_dummi_mod:the_teztlands"
+}

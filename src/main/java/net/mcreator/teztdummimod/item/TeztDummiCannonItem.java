@@ -21,7 +21,6 @@ import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.ShootableItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -41,7 +40,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 
 import net.mcreator.teztdummimod.procedures.TeztDummiCannonBulletHitsLivingEntityProcedure;
-import net.mcreator.teztdummimod.procedures.TeztDummiCannonBulletHitsBlockProcedure;
+import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 import java.util.Random;
@@ -76,7 +75,7 @@ public class TeztDummiCannonItem extends TeztDummiModModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(1000));
+			super(new Item.Properties().group(TeztDummiModItemGroup.tab).maxDamage(1000));
 			setRegistryName("tezt_dummi_cannon");
 		}
 
@@ -115,7 +114,7 @@ public class TeztDummiCannonItem extends TeztDummiModModElements.ModElement {
 						}
 					}
 					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.5f, 15, 15);
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.5f, 15, 0);
 						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
@@ -184,6 +183,7 @@ public class TeztDummiCannonItem extends TeztDummiModModElements.ModElement {
 			World world = this.world;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -203,11 +203,12 @@ public class TeztDummiCannonItem extends TeztDummiModModElements.ModElement {
 			if (this.inGround) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
 					$_dependencies.put("world", world);
-					TeztDummiCannonBulletHitsBlockProcedure.executeProcedure($_dependencies);
+					TeztDummiCannonBulletHitsLivingEntityProcedure.executeProcedure($_dependencies);
 				}
 				this.remove();
 			}
@@ -302,7 +303,7 @@ public class TeztDummiCannonItem extends TeztDummiModModElements.ModElement {
 		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 0.5f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setDamage(15);
-		entityarrow.setKnockbackStrength(15);
+		entityarrow.setKnockbackStrength(0);
 		entityarrow.setIsCritical(true);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();

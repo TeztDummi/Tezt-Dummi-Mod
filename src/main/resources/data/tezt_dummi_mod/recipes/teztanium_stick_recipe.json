@@ -1,0 +1,16 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "tezt_dummi_mod:teztanium"
+    }
+  ],
+  "result": {
+    "item": "tezt_dummi_mod:teztanium_stick",
+    "count": 1
+  }
+}

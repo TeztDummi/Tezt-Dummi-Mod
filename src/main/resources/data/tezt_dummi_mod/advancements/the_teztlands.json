@@ -1,0 +1,29 @@
+{
+  "display": {
+    "background": "tezt_dummi_mod:textures/zmenu.png",
+    "icon": {
+      "item": "tezt_dummi_mod:teztland"
+    },
+    "title": {
+      "translate": "advancements.the_teztlands.title"
+    },
+    "description": {
+      "translate": "advancements.the_teztlands.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "the_teztlands": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "tezt_dummi_mod:tezlands"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

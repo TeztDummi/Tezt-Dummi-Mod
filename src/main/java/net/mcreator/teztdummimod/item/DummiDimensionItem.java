@@ -8,17 +8,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 
 import net.mcreator.teztdummimod.world.dimension.DummiDimensionDimension;
+import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
 
 public class DummiDimensionItem extends Item {
 	@ObjectHolder("tezt_dummi_mod:dummi_dimension")
 	public static final Item block = null;
 	public DummiDimensionItem() {
-		super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(64));
+		super(new Item.Properties().group(TeztDummiModItemGroup.tab).maxDamage(64));
 	}
 
 	@Override

@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "tezt_dummi_mod:typin_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.ai_domination.title"
+    },
+    "description": {
+      "translate": "advancements.ai_domination.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ai_domination": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tezt_dummi_mod:typin_pickaxe",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "tezt_dummi_mod:the_teztlands"
+}

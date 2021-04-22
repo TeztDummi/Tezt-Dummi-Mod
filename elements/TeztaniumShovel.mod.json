@@ -8,7 +8,7 @@
     "name": "Teztanium Shovel",
     "specialInfo": [],
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "toolType": "Spade",
     "harvestLevel": 5,

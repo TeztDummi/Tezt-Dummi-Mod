@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 6,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "Items.ARROW"
+      },
+      {
+        "value": "Items.ARROW"
+      },
+      {
+        "value": "Items.ARROW"
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": "CUSTOM:TeztDummiEssenceDust"
+      },
+      {
+        "value": "Items.ARROW"
+      },
+      {
+        "value": "Items.ARROW"
+      },
+      {
+        "value": "Items.ARROW"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TeztyArrow"
+    },
+    "name": "tezt_rocket_recipe",
+    "namespace": "mod"
+  }
+}

@@ -2,8 +2,8 @@
   "_fv": 13,
   "_type": "mob",
   "definition": {
-    "mobName": "Teh Dummi",
-    "mobLabel": "Teh_Dummi",
+    "mobName": "Tezt_Dummi",
+    "mobLabel": "Tezt_Dummi",
     "mobModelName": "Biped",
     "mobModelTexture": "tezt_dummi_64x32.png",
     "mobModelGlowTexture": "",
@@ -21,7 +21,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "isBoss": false,
     "bossBarColor": "GREEN",
@@ -72,16 +72,16 @@
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "mobDrop": {
-      "value": "CUSTOM:TeztDummiEssenceDust"
+      "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:teztdumminutural"
     },
     "hurtSound": {
-      "value": ""
+      "value": "CUSTOM:teztdummihurt"
     },
     "deathSound": {
-      "value": ""
+      "value": "CUSTOM:teztdummideath"
     },
     "stepSound": {
       "value": ""
@@ -93,6 +93,9 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
+    "whenThisMobKillsAnother": {
+      "name": "TehDummiThisEntityKillsAnotherOne"
+    },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"173\" y=\"39\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.5</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"break_blocks\"><field name=\"speed\">1</field><field name=\"y_max\">1</field><field name=\"condition\">null,null</field><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">Blocks.STONE#3</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",

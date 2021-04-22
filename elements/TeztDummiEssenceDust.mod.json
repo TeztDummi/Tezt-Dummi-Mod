@@ -5,10 +5,10 @@
     "renderType": 0,
     "texture": "teztdummiessence_dust",
     "customModelName": "Normal",
-    "name": "TeztDummiEssence",
+    "name": "Tezt Dummi Essence",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "stackSize": 16,
     "enchantability": 0,

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tezt_dummi_mod:blocks/teztyflower",
+    "particle": "tezt_dummi_mod:blocks/teztyflower"
+  }
+}

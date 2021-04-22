@@ -20,8 +20,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -31,6 +29,7 @@ import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.goal.BreakBlockGoal;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
@@ -42,8 +41,12 @@ import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.teztdummimod.item.TeztDummiEssenceDustItem;
+import net.mcreator.teztdummimod.procedures.TehDummiThisEntityKillsAnotherOneProcedure;
+import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
+
+import java.util.Map;
+import java.util.HashMap;
 
 @TeztDummiModModElements.ModElement.Tag
 public class TehDummiEntity extends TeztDummiModModElements.ModElement {
@@ -59,7 +62,7 @@ public class TehDummiEntity extends TeztDummiModModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("teh_dummi")
 						.setRegistryName("teh_dummi");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -10027162, -16777063, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -10027162, -16777063, new Item.Properties().group(TeztDummiModItemGroup.tab))
 				.setRegistryName("teh_dummi_spawn_egg"));
 	}
 
@@ -100,7 +103,7 @@ public class TehDummiEntity extends TeztDummiModModElements.ModElement {
 			super(type, world);
 			experienceValue = 15;
 			setNoAI(false);
-			setCustomName(new StringTextComponent("Teh_Dummi"));
+			setCustomName(new StringTextComponent("Tezt_Dummi"));
 			setCustomNameVisible(true);
 		}
 
@@ -125,19 +128,32 @@ public class TehDummiEntity extends TeztDummiModModElements.ModElement {
 			return CreatureAttribute.UNDEFINED;
 		}
 
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(TeztDummiEssenceDustItem.block, (int) (1)));
+		@Override
+		public net.minecraft.util.SoundEvent getAmbientSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tezt_dummi_mod:teztdumminutural"));
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tezt_dummi_mod:teztdummihurt"));
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tezt_dummi_mod:teztdummideath"));
+		}
+
+		@Override
+		public void onKillEntity(LivingEntity entity) {
+			super.onKillEntity(entity);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity sourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				TehDummiThisEntityKillsAnotherOneProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

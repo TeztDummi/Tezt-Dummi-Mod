@@ -11,7 +11,7 @@
     "renderType": 11,
     "customModelName": "Single texture",
     "rotationMode": 0,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -24,14 +24,14 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Block of TeztDummiEssence",
+    "name": "Block of Tezt Dummi Essence",
     "specialInfo": [],
     "hardness": 0.5,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "BUILDING_BLOCKS"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -65,7 +65,7 @@
     "soundOnStep": {
       "value": "SAND"
     },
-    "luminance": 0.0,
+    "luminance": 1.0,
     "unbreakable": false,
     "breakHarvestLevel": 2,
     "spawnParticles": false,

@@ -6,7 +6,7 @@
       "value": "CUSTOM:TeztDummiEssenceBlock"
     },
     "portalParticles": {
-      "value": "WATER_BUBBLE"
+      "value": "COMPOSTER"
     },
     "portalLuminance": 0.2,
     "portalSound": {
@@ -14,10 +14,10 @@
     },
     "igniterName": "Ignitey Stick",
     "igniterTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "texture": "igniteystick",
-    "portalTexture": "teztdummiface",
+    "portalTexture": "teztdummiportal",
     "enablePortal": true,
     "biomesInDimension": [
       {

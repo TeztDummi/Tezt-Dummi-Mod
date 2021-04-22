@@ -1,1 +1,74 @@
-{}
+{
+  "teztdummideath": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "tezt_dummi_mod:video0_7",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:video2",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:teztdummiwheeze",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:eeaaauughhh",
+        "stream": false
+      }
+    ]
+  },
+  "teztdummihurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "tezt_dummi_mod:video3_1",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:video8",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:video9",
+        "stream": false
+      }
+    ]
+  },
+  "teztdumminutural": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "tezt_dummi_mod:teztdummihey",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:video4",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:video5",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:video6",
+        "stream": false
+      },
+      {
+        "name": "tezt_dummi_mod:video7",
+        "stream": false
+      }
+    ]
+  },
+  "teztdummihaha": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "tezt_dummi_mod:teztdummilaugh",
+        "stream": false
+      }
+    ]
+  }
+}

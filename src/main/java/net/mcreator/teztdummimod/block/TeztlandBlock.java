@@ -16,7 +16,6 @@ import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
@@ -30,6 +29,7 @@ import net.minecraft.block.IWaterLoggable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 import java.util.List;
@@ -47,7 +47,7 @@ public class TeztlandBlock extends TeztDummiModModElements.ModElement {
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+				.add(() -> new BlockItem(block, new Item.Properties().group(TeztDummiModItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

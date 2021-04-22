@@ -1,0 +1,42 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:chip"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:chip"
+    },
+    "2": {
+      "item": "tezt_dummi_mod:chip"
+    },
+    "3": {
+      "item": "tezt_dummi_mod:chip"
+    },
+    "4": {
+      "item": "tezt_dummi_mod:bag"
+    },
+    "5": {
+      "item": "tezt_dummi_mod:chip"
+    },
+    "6": {
+      "item": "tezt_dummi_mod:chip"
+    },
+    "7": {
+      "item": "tezt_dummi_mod:chip"
+    },
+    "8": {
+      "item": "tezt_dummi_mod:chip"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:bag_of_chips",
+    "count": 1
+  }
+}

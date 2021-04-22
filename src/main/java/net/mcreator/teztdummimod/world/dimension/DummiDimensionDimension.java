@@ -242,7 +242,7 @@ public class DummiDimensionDimension extends TeztDummiModModElements.ModElement 
 					pz = pos.getZ() + 0.5 + 0.25 * j;
 					vz = random.nextFloat() * 2 * j;
 				}
-				world.addParticle(ParticleTypes.BUBBLE, px, py, pz, vx, vy, vz);
+				world.addParticle(ParticleTypes.COMPOSTER, px, py, pz, vx, vy, vz);
 			}
 		}
 

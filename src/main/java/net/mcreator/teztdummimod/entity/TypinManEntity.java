@@ -19,19 +19,20 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
-import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
@@ -41,8 +42,11 @@ import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 
 import net.mcreator.teztdummimod.procedures.TypinManEntityIsHurtProcedure;
-import net.mcreator.teztdummimod.item.TeztaniumSwordItem;
+import net.mcreator.teztdummimod.procedures.TypinManEntityDiesProcedure;
+import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
+import net.mcreator.teztdummimod.item.TypinPickaxeItem;
 import net.mcreator.teztdummimod.item.TeztaniumArmorItem;
+import net.mcreator.teztdummimod.item.KeyCannonItem;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 import java.util.Map;
@@ -62,7 +66,7 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("typin_man")
 						.setRegistryName("typin_man");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -39424, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -39424, new Item.Properties().group(TeztDummiModItemGroup.tab))
 				.setRegistryName("typin_man_spawn_egg"));
 	}
 
@@ -80,7 +84,7 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 			return customRender;
 		});
 	}
-	public static class CustomEntity extends MonsterEntity {
+	public static class CustomEntity extends MonsterEntity implements IRangedAttackMob {
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
 			this(entity, world);
 		}
@@ -89,8 +93,7 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 			super(type, world);
 			experienceValue = 7035;
 			setNoAI(false);
-			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(TeztaniumSwordItem.block, (int) (1)));
-			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(TeztaniumSwordItem.block, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(KeyCannonItem.block, (int) (1)));
 			this.setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(TeztaniumArmorItem.helmet, (int) (1)));
 			this.setItemStackToSlot(EquipmentSlotType.CHEST, new ItemStack(TeztaniumArmorItem.body, (int) (1)));
 			this.setItemStackToSlot(EquipmentSlotType.LEGS, new ItemStack(TeztaniumArmorItem.legs, (int) (1)));
@@ -105,17 +108,27 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
-			this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(3, new LeapAtTargetGoal(this, (float) 0.2));
-			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 0.8));
-			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, true));
+			this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(2, new LeapAtTargetGoal(this, (float) 0.2));
+			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8));
+			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
+				@Override
+				public boolean shouldContinueExecuting() {
+					return this.shouldExecute();
+				}
+			});
 		}
 
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
+		}
+
+		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
+			super.dropSpecialItems(source, looting, recentlyHitIn);
+			this.entityDropItem(new ItemStack(TypinPickaxeItem.block, (int) (1)));
 		}
 
 		@Override
@@ -137,6 +150,7 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 			Entity sourceentity = source.getTrueSource();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -144,6 +158,21 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 				TypinManEntityIsHurtProcedure.executeProcedure($_dependencies);
 			}
 			return super.attackEntityFrom(source, amount);
+		}
+
+		@Override
+		public void onDeath(DamageSource source) {
+			super.onDeath(source);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity sourceentity = source.getTrueSource();
+			Entity entity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TypinManEntityDiesProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -158,6 +187,10 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
 				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
 			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
+		}
+
+		public void attackEntityWithRangedAttack(LivingEntity target, float flval) {
+			KeyCannonItem.shoot(this, target);
 		}
 
 		@Override

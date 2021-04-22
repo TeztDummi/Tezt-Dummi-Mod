@@ -8,7 +8,7 @@
     "name": "Teztanium Ingot",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "stackSize": 64,
     "enchantability": 0,

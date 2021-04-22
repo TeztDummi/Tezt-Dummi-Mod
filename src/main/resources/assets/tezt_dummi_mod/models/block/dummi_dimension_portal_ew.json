@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "tezt_dummi_mod:blocks/teztdummiface",
-    "portal": "tezt_dummi_mod:blocks/teztdummiface"
+    "particle": "tezt_dummi_mod:blocks/teztdummiportal",
+    "portal": "tezt_dummi_mod:blocks/teztdummiportal"
   },
   "elements": [
     {

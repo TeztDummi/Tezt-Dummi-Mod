@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "tezt_dummi_mod:tezt_dummi_cannon"
+    },
+    "title": {
+      "translate": "advancements.weeeeee.title"
+    },
+    "description": {
+      "translate": "advancements.weeeeee.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "weeeeee": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "tezt_dummi_mod:the_teztlands"
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "tezt_dummi_mod:tezty_rock"
+    },
+    "title": {
+      "translate": "advancements.the_dummi_dimension.title"
+    },
+    "description": {
+      "translate": "advancements.the_dummi_dimension.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "the_dummi_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "tezt_dummi_mod:dummi_dimension"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "tezt_dummi_mod:the_teztlands"
+}
