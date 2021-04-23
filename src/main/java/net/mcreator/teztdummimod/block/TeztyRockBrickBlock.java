@@ -24,7 +24,7 @@ public class TeztyRockBrickBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_rock_brick")
 	public static final Block block = null;
 	public TeztyRockBrickBlock(TeztDummiModModElements instance) {
-		super(instance, 53);
+		super(instance, 11);
 	}
 
 	@Override

@@ -56,7 +56,7 @@ import java.util.HashMap;
 public class TypinManEntity extends TeztDummiModModElements.ModElement {
 	public static EntityType entity = null;
 	public TypinManEntity(TeztDummiModModElements instance) {
-		super(instance, 59);
+		super(instance, 30);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

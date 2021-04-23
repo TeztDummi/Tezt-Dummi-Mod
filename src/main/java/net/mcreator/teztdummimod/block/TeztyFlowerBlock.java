@@ -51,7 +51,7 @@ public class TeztyFlowerBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_flower")
 	public static final Block block = null;
 	public TeztyFlowerBlock(TeztDummiModModElements instance) {
-		super(instance, 76);
+		super(instance, 32);
 	}
 
 	@Override

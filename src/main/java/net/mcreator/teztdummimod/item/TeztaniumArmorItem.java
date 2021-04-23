@@ -29,7 +29,7 @@ public class TeztaniumArmorItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:teztanium_armor_boots")
 	public static final Item boots = null;
 	public TeztaniumArmorItem(TeztDummiModModElements instance) {
-		super(instance, 37);
+		super(instance, 22);
 	}
 
 	@Override

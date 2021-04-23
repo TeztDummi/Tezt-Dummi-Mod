@@ -16,7 +16,7 @@ public class TeztaniumStickItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:teztanium_stick")
 	public static final Item block = null;
 	public TeztaniumStickItem(TeztDummiModModElements instance) {
-		super(instance, 49);
+		super(instance, 14);
 	}
 
 	@Override

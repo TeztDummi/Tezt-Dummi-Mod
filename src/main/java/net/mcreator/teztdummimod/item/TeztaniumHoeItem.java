@@ -17,7 +17,7 @@ public class TeztaniumHoeItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:teztanium_hoe")
 	public static final Item block = null;
 	public TeztaniumHoeItem(TeztDummiModModElements instance) {
-		super(instance, 31);
+		super(instance, 20);
 	}
 
 	@Override

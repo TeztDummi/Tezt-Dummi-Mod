@@ -100,7 +100,7 @@ public class DummiDimensionDimension extends TeztDummiModModElements.ModElement 
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public DummiDimensionDimension(TeztDummiModModElements instance) {
-		super(instance, 42);
+		super(instance, 25);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

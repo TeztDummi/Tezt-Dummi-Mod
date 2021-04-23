@@ -40,7 +40,7 @@ public class TeztlandBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:teztland")
 	public static final Block block = null;
 	public TeztlandBlock(TeztDummiModModElements instance) {
-		super(instance, 19);
+		super(instance, 8);
 	}
 
 	@Override

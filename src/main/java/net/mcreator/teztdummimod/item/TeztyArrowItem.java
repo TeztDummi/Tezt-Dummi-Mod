@@ -16,7 +16,7 @@ public class TeztyArrowItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_arrow")
 	public static final Item block = null;
 	public TeztyArrowItem(TeztDummiModModElements instance) {
-		super(instance, 55);
+		super(instance, 24);
 	}
 
 	@Override

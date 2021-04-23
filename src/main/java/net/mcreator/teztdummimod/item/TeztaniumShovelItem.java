@@ -17,7 +17,7 @@ public class TeztaniumShovelItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:teztanium_shovel")
 	public static final Item block = null;
 	public TeztaniumShovelItem(TeztDummiModModElements instance) {
-		super(instance, 30);
+		super(instance, 19);
 	}
 
 	@Override

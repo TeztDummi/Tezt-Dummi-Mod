@@ -28,7 +28,7 @@ public class TeztyFenceBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_fence")
 	public static final Block block = null;
 	public TeztyFenceBlock(TeztDummiModModElements instance) {
-		super(instance, 9);
+		super(instance, 5);
 	}
 
 	@Override

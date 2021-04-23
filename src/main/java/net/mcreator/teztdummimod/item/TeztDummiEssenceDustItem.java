@@ -18,7 +18,7 @@ public class TeztDummiEssenceDustItem extends TeztDummiModModElements.ModElement
 	@ObjectHolder("tezt_dummi_mod:tezt_dummi_essence_dust")
 	public static final Item block = null;
 	public TeztDummiEssenceDustItem(TeztDummiModModElements instance) {
-		super(instance, 43);
+		super(instance, 26);
 	}
 
 	@Override

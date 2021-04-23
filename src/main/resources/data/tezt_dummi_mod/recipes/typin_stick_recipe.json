@@ -1,0 +1,20 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:typin_planks"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:typin_planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:stick",
+    "count": 4
+  }
+}

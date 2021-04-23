@@ -1,0 +1,33 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:typin_planks"
+    },
+    "3": {
+      "item": "tezt_dummi_mod:typin_planks"
+    },
+    "4": {
+      "item": "tezt_dummi_mod:typin_planks"
+    },
+    "6": {
+      "item": "tezt_dummi_mod:typin_planks"
+    },
+    "7": {
+      "item": "tezt_dummi_mod:typin_planks"
+    },
+    "8": {
+      "item": "tezt_dummi_mod:typin_planks"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:typin_stairs",
+    "count": 4
+  }
+}

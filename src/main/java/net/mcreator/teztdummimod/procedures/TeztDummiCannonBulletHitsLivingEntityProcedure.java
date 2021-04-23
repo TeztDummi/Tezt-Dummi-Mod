@@ -18,7 +18,7 @@ import java.util.Iterator;
 @TeztDummiModModElements.ModElement.Tag
 public class TeztDummiCannonBulletHitsLivingEntityProcedure extends TeztDummiModModElements.ModElement {
 	public TeztDummiCannonBulletHitsLivingEntityProcedure(TeztDummiModModElements instance) {
-		super(instance, 56);
+		super(instance, 72);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

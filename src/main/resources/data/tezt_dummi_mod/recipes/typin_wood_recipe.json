@@ -1,0 +1,26 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:typin_log"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:typin_log"
+    },
+    "2": {
+      "item": "tezt_dummi_mod:typin_log"
+    },
+    "3": {
+      "item": "tezt_dummi_mod:typin_log"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:typin_wood",
+    "count": 3
+  }
+}

@@ -17,7 +17,7 @@ public class ChipItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:chip")
 	public static final Item block = null;
 	public ChipItem(TeztDummiModModElements instance) {
-		super(instance, 77);
+		super(instance, 33);
 	}
 
 	@Override

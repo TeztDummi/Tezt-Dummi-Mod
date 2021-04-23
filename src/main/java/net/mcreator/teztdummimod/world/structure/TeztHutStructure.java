@@ -32,7 +32,7 @@ import java.util.Random;
 @TeztDummiModModElements.ModElement.Tag
 public class TeztHutStructure extends TeztDummiModModElements.ModElement {
 	public TeztHutStructure(TeztDummiModModElements instance) {
-		super(instance, 53);
+		super(instance, 70);
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class TeztHutStructure extends TeztDummiModModElements.ModElement {
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
-				if ((random.nextInt(1000000) + 1) <= 50000) {
+				if ((random.nextInt(1000000) + 1) <= 1000) {
 					int count = random.nextInt(1) + 1;
 					for (int a = 0; a < count; a++) {
 						int i = ci + random.nextInt(16);

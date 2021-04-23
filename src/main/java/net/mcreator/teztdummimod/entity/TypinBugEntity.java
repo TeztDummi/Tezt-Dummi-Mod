@@ -55,7 +55,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class TypinBugEntity extends TeztDummiModModElements.ModElement {
 	public static EntityType entity = null;
 	public TypinBugEntity(TeztDummiModModElements instance) {
-		super(instance, 58);
+		super(instance, 29);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

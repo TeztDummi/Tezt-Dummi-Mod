@@ -39,7 +39,7 @@ public class TeztaniumOreBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:teztanium_ore")
 	public static final Block block = null;
 	public TeztaniumOreBlock(TeztDummiModModElements instance) {
-		super(instance, 22);
+		super(instance, 10);
 	}
 
 	@Override

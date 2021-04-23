@@ -28,7 +28,7 @@ public class TeztyWoodBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_wood")
 	public static final Block block = null;
 	public TeztyWoodBlock(TeztDummiModModElements instance) {
-		super(instance, 3);
+		super(instance, 39);
 	}
 
 	@Override

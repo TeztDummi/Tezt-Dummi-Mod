@@ -22,7 +22,7 @@ import java.util.Map;
 @TeztDummiModModElements.ModElement.Tag
 public class TypinManEntityIsHurtProcedure extends TeztDummiModModElements.ModElement {
 	public TypinManEntityIsHurtProcedure(TeztDummiModModElements instance) {
-		super(instance, 60);
+		super(instance, 74);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

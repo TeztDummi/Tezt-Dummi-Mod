@@ -29,7 +29,7 @@ public class TypinPickaxeItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:typin_pickaxe")
 	public static final Item block = null;
 	public TypinPickaxeItem(TeztDummiModModElements instance) {
-		super(instance, 73);
+		super(instance, 21);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class TeztySlabBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_slab")
 	public static final Block block = null;
 	public TeztySlabBlock(TeztDummiModModElements instance) {
-		super(instance, 8);
+		super(instance, 4);
 	}
 
 	@Override

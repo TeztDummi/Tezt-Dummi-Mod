@@ -28,7 +28,7 @@ public class TeztyLogBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_log")
 	public static final Block block = null;
 	public TeztyLogBlock(TeztDummiModModElements instance) {
-		super(instance, 4);
+		super(instance, 1);
 	}
 
 	@Override

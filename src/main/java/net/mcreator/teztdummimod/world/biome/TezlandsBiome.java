@@ -47,7 +47,7 @@ public class TezlandsBiome extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezlands")
 	public static final CustomBiome biome = null;
 	public TezlandsBiome(TeztDummiModModElements instance) {
-		super(instance, 19);
+		super(instance, 52);
 	}
 
 	@Override

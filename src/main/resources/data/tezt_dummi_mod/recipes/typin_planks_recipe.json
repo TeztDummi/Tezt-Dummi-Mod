@@ -1,0 +1,13 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:typin_log"
+    }
+  ],
+  "result": {
+    "item": "tezt_dummi_mod:typin_planks",
+    "count": 4
+  }
+}

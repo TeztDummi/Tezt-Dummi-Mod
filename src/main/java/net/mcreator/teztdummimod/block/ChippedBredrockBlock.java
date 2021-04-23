@@ -25,7 +25,7 @@ public class ChippedBredrockBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:chipped_bredrock")
 	public static final Block block = null;
 	public ChippedBredrockBlock(TeztDummiModModElements instance) {
-		super(instance, 82);
+		super(instance, 36);
 	}
 
 	@Override

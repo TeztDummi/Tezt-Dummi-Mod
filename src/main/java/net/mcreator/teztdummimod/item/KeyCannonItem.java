@@ -53,7 +53,7 @@ public class KeyCannonItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:entitybulletkey_cannon")
 	public static final EntityType arrow = null;
 	public KeyCannonItem(TeztDummiModModElements instance) {
-		super(instance, 61);
+		super(instance, 37);
 	}
 
 	@Override

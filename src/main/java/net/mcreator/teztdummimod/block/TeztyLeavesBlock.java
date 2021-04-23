@@ -27,7 +27,7 @@ public class TeztyLeavesBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_leaves")
 	public static final Block block = null;
 	public TeztyLeavesBlock(TeztDummiModModElements instance) {
-		super(instance, 6);
+		super(instance, 7);
 	}
 
 	@Override

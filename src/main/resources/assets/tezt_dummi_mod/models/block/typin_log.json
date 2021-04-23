@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tezt_dummi_mod:blocks/ztypinlogtop",
+    "up": "tezt_dummi_mod:blocks/ztypinlogtop",
+    "north": "tezt_dummi_mod:blocks/ztypinlogside",
+    "east": "tezt_dummi_mod:blocks/ztypinlogside",
+    "south": "tezt_dummi_mod:blocks/ztypinlogside",
+    "west": "tezt_dummi_mod:blocks/ztypinlogside",
+    "particle": "tezt_dummi_mod:blocks/ztypinlogtop"
+  }
+}

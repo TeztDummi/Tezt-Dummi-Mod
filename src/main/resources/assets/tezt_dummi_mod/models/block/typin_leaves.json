@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/ztypinleaves",
+    "particle": "tezt_dummi_mod:blocks/ztypinleaves"
+  }
+}

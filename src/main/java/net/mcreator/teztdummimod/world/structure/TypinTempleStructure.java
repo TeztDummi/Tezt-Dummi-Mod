@@ -32,7 +32,7 @@ import java.util.Random;
 @TeztDummiModModElements.ModElement.Tag
 public class TypinTempleStructure extends TeztDummiModModElements.ModElement {
 	public TypinTempleStructure(TeztDummiModModElements instance) {
-		super(instance, 66);
+		super(instance, 75);
 	}
 
 	@Override

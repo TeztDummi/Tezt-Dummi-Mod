@@ -11,7 +11,7 @@ import java.util.Map;
 @TeztDummiModModElements.ModElement.Tag
 public class TeztDummiCannonBulletHitsBlockProcedure extends TeztDummiModModElements.ModElement {
 	public TeztDummiCannonBulletHitsBlockProcedure(TeztDummiModModElements instance) {
-		super(instance, 57);
+		super(instance, 73);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 @TeztDummiModModElements.ModElement.Tag
 public class CoverMeInTeztDummiAcheivementProcedure extends TeztDummiModModElements.ModElement {
 	public CoverMeInTeztDummiAcheivementProcedure(TeztDummiModModElements instance) {
-		super(instance, 90);
+		super(instance, 92);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

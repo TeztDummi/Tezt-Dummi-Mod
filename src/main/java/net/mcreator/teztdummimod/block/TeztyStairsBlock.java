@@ -27,7 +27,7 @@ public class TeztyStairsBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:tezty_stairs")
 	public static final Block block = null;
 	public TeztyStairsBlock(TeztDummiModModElements instance) {
-		super(instance, 7);
+		super(instance, 3);
 	}
 
 	@Override

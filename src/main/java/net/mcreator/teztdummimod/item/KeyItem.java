@@ -16,7 +16,7 @@ public class KeyItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:key")
 	public static final Item block = null;
 	public KeyItem(TeztDummiModModElements instance) {
-		super(instance, 62);
+		super(instance, 38);
 	}
 
 	@Override

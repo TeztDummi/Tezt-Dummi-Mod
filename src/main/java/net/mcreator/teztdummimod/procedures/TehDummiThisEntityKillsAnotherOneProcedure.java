@@ -7,7 +7,7 @@ import java.util.Map;
 @TeztDummiModModElements.ModElement.Tag
 public class TehDummiThisEntityKillsAnotherOneProcedure extends TeztDummiModModElements.ModElement {
 	public TehDummiThisEntityKillsAnotherOneProcedure(TeztDummiModModElements instance) {
-		super(instance, 2);
+		super(instance, 43);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

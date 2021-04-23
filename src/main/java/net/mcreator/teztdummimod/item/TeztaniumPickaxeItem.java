@@ -17,7 +17,7 @@ public class TeztaniumPickaxeItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:teztanium_pickaxe")
 	public static final Item block = null;
 	public TeztaniumPickaxeItem(TeztDummiModModElements instance) {
-		super(instance, 27);
+		super(instance, 17);
 	}
 
 	@Override

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tezt_dummi_mod:blocks/typin_planks",
+    "top": "tezt_dummi_mod:blocks/typin_planks",
+    "side": "tezt_dummi_mod:blocks/typin_planks"
+  }
+}
