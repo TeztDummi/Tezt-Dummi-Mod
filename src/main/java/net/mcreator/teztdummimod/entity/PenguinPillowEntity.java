@@ -119,6 +119,8 @@ public class PenguinPillowEntity extends TeztDummiModModElements.ModElement {
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
+			if (source == DamageSource.FALL)
+				return false;
 			if (source == DamageSource.DROWN)
 				return false;
 			return super.attackEntityFrom(source, amount);
@@ -136,7 +138,7 @@ public class PenguinPillowEntity extends TeztDummiModModElements.ModElement {
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
 				PenguinPillowRightClickedOnEntityProcedure.executeProcedure($_dependencies);
 			}
 			return retval;

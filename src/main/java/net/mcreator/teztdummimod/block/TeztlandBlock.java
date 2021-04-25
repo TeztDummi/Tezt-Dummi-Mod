@@ -4,6 +4,7 @@ package net.mcreator.teztdummimod.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -97,6 +98,11 @@ public class TeztlandBlock extends TeztDummiModModElements.ModElement {
 				world.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(world));
 			}
 			return super.updatePostPlacement(state, facing, facingState, world, currentPos, facingPos);
+		}
+
+		@Override
+		public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
+			return true;
 		}
 
 		@Override

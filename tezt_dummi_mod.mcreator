@@ -1136,16 +1136,342 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
       }
+    },
+    {
+      "name": "Teztstegore",
+      "type": "mob",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teztstegore"
+    },
+    {
+      "name": "TeztstegoreEntityIsHurt",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teztstegore_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeztstegoreOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teztstegore_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TypinPickaxeBlockDestroyedWithTool",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "typin_pickaxe_block_destroyed_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PenginPillowFlapOnKeyPressed",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pengin_pillow_flap_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PenginPillowFlap",
+      "type": "keybind",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "penguin_pillow_flap"
+    },
+    {
+      "name": "TypinPickaxeTypeOnKeyPressed",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "typin_pickaxe_type_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TypinPickaxeType",
+      "type": "keybind",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "typin_pickaxe_type"
+    },
+    {
+      "name": "Code",
+      "type": "fluid",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "code"
+    },
+    {
+      "name": "VirtualBlock",
+      "type": "block",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "virtual_block"
+    },
+    {
+      "name": "Simulation",
+      "type": "dimension",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simulation"
+    },
+    {
+      "name": "CodeMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "code_mobplayer_collides_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VirtualGrass",
+      "type": "block",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "virtual_grass"
+    },
+    {
+      "name": "SimulationPlains",
+      "type": "biome",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simulation_plains"
+    },
+    {
+      "name": "SimulationHills",
+      "type": "biome",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simulation_hills"
+    },
+    {
+      "name": "GlitchyVirtualBlock",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glitchy_virtual_block"
+    },
+    {
+      "name": "Glitch",
+      "type": "particle",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glitch"
+    },
+    {
+      "name": "VirusContainerRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "virus_container_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VirusContainer",
+      "type": "item",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "virus_container"
+    },
+    {
+      "name": "Virus",
+      "type": "item",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "virus"
     }
   ],
   "variable_elements": [
     {
       "name": "Attacknumber",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "TypinPickaxeType",
       "type": "number",
       "scope": "map",
       "value": "0"
@@ -1207,6 +1533,7 @@
       "subtitles.teztdummihurt": "",
       "block.tezt_dummi_mod.tezty_rock": "Tezty Rock",
       "item.tezt_dummi_mod.key_cannon": "Key Cannon",
+      "block.tezt_dummi_mod.glitchy_virtual_block": "Virtual Block",
       "item.tezt_dummi_mod.chip": "Chip",
       "block.tezt_dummi_mod.tezty_flower": "Tezty Flower",
       "advancements.weeeeee.descr": "Craft a Tezt Dummi Cannon",
@@ -1218,6 +1545,7 @@
       "item.tezt_dummi_mod.teztanium_stick": "Teztanium Stick",
       "biome.tezt_dummi_mod.tezlands": "Teztlands",
       "advancements.into_the_sunset.title": "Into The Sunset",
+      "item.tezt_dummi_mod.simulation": "Simulation Portal Igniter (Creative)",
       "block.tezt_dummi_mod.tezty_fence": "Tezty Fence",
       "item.tezt_dummi_mod.tezt_dummi_essence_dust": "Tezt Dummi Essence",
       "block.tezt_dummi_mod.tezty_slab": "Tezty Slab",
@@ -1229,6 +1557,9 @@
       "item.tezt_dummi_mod.penguin_pillow_spawn_egg": "Penguin Pillow Spawn Egg",
       "advancements.cover_me_in_tezt_dummi.title": "Cover Me In Tezt Dummi",
       "block.tezt_dummi_mod.typin_fence": "Typin Fence",
+      "entity.tezt_dummi_mod.teztstegore": "Teztgore",
+      "biome.tezt_dummi_mod.simulation_hills": "Simulation Hills",
+      "block.tezt_dummi_mod.virtual_block": "Virtual Block",
       "advancements.fatty.title": "Fatty",
       "item.tezt_dummi_mod.teztanium_pickaxe": "Teztanium Pickaxe",
       "block.tezt_dummi_mod.tezty_wood": "Tezty Wood",
@@ -1237,12 +1568,16 @@
       "block.tezt_dummi_mod.tezty_fence_gate": "Tezty Fence Gate",
       "block.tezt_dummi_mod.chipped_bredrock": "Chipped Bredrock",
       "advancements.ai_domination.title": "Ai Domination",
+      "block.tezt_dummi_mod.virtual_grass": "Virtual Grass",
       "block.tezt_dummi_mod.teztland": "Teztland",
+      "item.tezt_dummi_mod.teztstegore_spawn_egg": "Teztgore Spawn Egg",
       "item.tezt_dummi_mod.hasty_pasty_spawn_egg": "Hasty Pasty Spawn Egg",
       "item.tezt_dummi_mod.typin_man_spawn_egg": "Typin Man Spawn Egg",
+      "fluid.code": "Code",
       "item.tezt_dummi_mod.glitchy_typin_bug_spawn_egg": "Glitchy Typin Bug Spawn Egg",
       "item.tezt_dummi_mod.teztanium_ingot": "Teztanium Ingot",
       "item.tezt_dummi_mod.dummi_dimension": "Ignitey Stick",
+      "biome.tezt_dummi_mod.simulation_plains": "Simulation Plains",
       "block.tezt_dummi_mod.typin_fence_gate": "Typin Fence Gate",
       "item.tezt_dummi_mod.typin_pickaxe": "Typin Pickaxe",
       "item.tezt_dummi_mod.teztanium": "Teztanium",
@@ -1255,22 +1590,27 @@
       "block.tezt_dummi_mod.typin_wood": "Typin Wood",
       "advancements.the_teztlands.title": "The Teztlands",
       "item.tezt_dummi_mod.teztanium_shovel": "Teztanium Shovel",
+      "key.mcreator.penguin_pillow_flap": "Penguin Pillow Flap",
       "block.tezt_dummi_mod.tezty_stairs": "Tezty Stairs",
       "advancements.cover_me_in_tezt_dummi.descr": "Have a peice of Teztanium Armour",
       "entity.tezt_dummi_mod.penguin_pillow": "Penguin Pillow",
+      "item.tezt_dummi_mod.code_bucket": "Code Bucket",
       "block.tezt_dummi_mod.tezty_rock_brick": "Tezty Rock Brick",
       "item.tezt_dummi_mod.teztanium_sword": "Teztanium Sword",
       "item.tezt_dummi_mod.key": "Key",
       "advancements.the_dummi_dimension.descr": "Where am I?",
-      "advancements.into_the_sunset.descr": "Drive a Penguin Pillow for 5 minutes",
+      "advancements.into_the_sunset.descr": "Drive a Penguin Pillow",
+      "item.tezt_dummi_mod.virus_container": "Virus Container",
       "advancements.fatty.descr": "Eat a bag of pun",
       "block.tezt_dummi_mod.typin_leaves": "Typin Leaves",
       "entity.tezt_dummi_mod.typin_bug": "Typin Bug",
+      "item.tezt_dummi_mod.virus": "Virus",
       "entity.tezt_dummi_mod.glitchy_typin_bug": "Glitchy Typin Bug",
       "item.tezt_dummi_mod.bag_of_chips": "Bag Of Chips",
       "block.tezt_dummi_mod.typin_planks": "Typin Planks",
       "advancements.ai_domination.descr": "Kill Typin Man and get the TypinPickaxe",
       "item.tezt_dummi_mod.teztanium_armor_boots": "Teztanium Boots",
+      "key.mcreator.typin_pickaxe_type": "Typin Pickaxe Type",
       "block.tezt_dummi_mod.teztanium_block": "Block of Teztanium",
       "block.tezt_dummi_mod.typin_stairs": "Typin Stairs",
       "itemGroup.tabtezt_dummi_mod": "Tezt Dummi Mod"

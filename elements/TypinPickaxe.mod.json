@@ -6,7 +6,9 @@
     "texture": "typinpickaxe",
     "customModelName": "Normal",
     "name": "Typin Pickaxe",
-    "specialInfo": [],
+    "specialInfo": [
+      "Press Y to change mode"
+    ],
     "creativeTab": {
       "value": "CUSTOM:TeztDummiMod"
     },
@@ -24,6 +26,9 @@
     "damageOnCrafting": false,
     "onRightClickedOnBlock": {
       "name": "TypinPickaxeRightClickedOnBlock"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "TypinPickaxeBlockDestroyedWithTool"
     }
   }
 }

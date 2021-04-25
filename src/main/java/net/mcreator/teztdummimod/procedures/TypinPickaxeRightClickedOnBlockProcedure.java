@@ -60,7 +60,7 @@ public class TypinPickaxeRightClickedOnBlockProcedure extends TeztDummiModModEle
 				world.setBlockState(_bp, _bs, 3);
 			}
 			for (int index0 = 0; index0 < (int) (20); index0++) {
-				world.addParticle(ParticleTypes.CRIT, (x + Math.random()), y, (z + Math.random()), 0, 1, 0);
+				world.addParticle(ParticleTypes.CRIT, ((x + Math.random()) * 1.5), ((y - Math.random()) + 1), ((z + Math.random()) * 1.5), 0, 0, 0);
 			}
 		}
 	}

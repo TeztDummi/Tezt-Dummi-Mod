@@ -84,7 +84,7 @@ public class TeztaniumOreBlock extends TeztDummiModModElements.ModElement {
 				if (blockAt.getBlock() == TeztlandBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 3)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(16, 1, 1, 255))));
+			}), block.getDefaultState(), 3)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(16, 1, 1, 80))));
 		}
 	}
 }

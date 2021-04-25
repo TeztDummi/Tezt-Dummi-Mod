@@ -59,7 +59,7 @@ public class TeztHutStructure extends TeztDummiModModElements.ModElement {
 						j -= 1;
 						Rotation rotation = Rotation.values()[random.nextInt(3)];
 						Mirror mirror = Mirror.values()[random.nextInt(2)];
-						BlockPos spawnTo = new BlockPos(i + 0, j + -14, k + 0);
+						BlockPos spawnTo = new BlockPos(i + 5, j + -14, k + 5);
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();

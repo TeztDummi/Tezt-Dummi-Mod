@@ -1,0 +1,12 @@
+{
+  "_fv": 13,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Y",
+    "keyBindingName": "Penguin Pillow Flap",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "PenginPillowFlapOnKeyPressed"
+    }
+  }
+}

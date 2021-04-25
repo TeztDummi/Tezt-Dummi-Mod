@@ -82,6 +82,7 @@ public class TeztDummiModModVariables {
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "tezt_dummi_mod_mapvars";
 		public double Attacknumber = 0;
+		public double TypinPickaxeType = 0;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -93,11 +94,13 @@ public class TeztDummiModModVariables {
 		@Override
 		public void read(CompoundNBT nbt) {
 			Attacknumber = nbt.getDouble("Attacknumber");
+			TypinPickaxeType = nbt.getDouble("TypinPickaxeType");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
 			nbt.putDouble("Attacknumber", Attacknumber);
+			nbt.putDouble("TypinPickaxeType", TypinPickaxeType);
 			return nbt;
 		}
 

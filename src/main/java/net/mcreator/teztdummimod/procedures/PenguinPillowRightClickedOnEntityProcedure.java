@@ -19,21 +19,21 @@ public class PenguinPillowRightClickedOnEntityProcedure extends TeztDummiModModE
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure PenguinPillowRightClickedOnEntity!");
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				System.err.println("Failed to load dependency sourceentity for procedure PenguinPillowRightClickedOnEntity!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		if (entity instanceof ServerPlayerEntity) {
-			Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		if (sourceentity instanceof ServerPlayerEntity) {
+			Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) sourceentity).server).getAdvancementManager()
 					.getAdvancement(new ResourceLocation("tezt_dummi_mod:into_the_sunset"));
-			AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+			AdvancementProgress _ap = ((ServerPlayerEntity) sourceentity).getAdvancements().getProgress(_adv);
 			if (!_ap.isDone()) {
 				Iterator _iterator = _ap.getRemaningCriteria().iterator();
 				while (_iterator.hasNext()) {
 					String _criterion = (String) _iterator.next();
-					((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+					((ServerPlayerEntity) sourceentity).getAdvancements().grantCriterion(_adv, _criterion);
 				}
 			}
 		}

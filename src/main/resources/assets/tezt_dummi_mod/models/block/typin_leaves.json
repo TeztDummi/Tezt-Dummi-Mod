@@ -1,7 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "tezt_dummi_mod:blocks/ztypinleaves",
+    "down": "tezt_dummi_mod:blocks/ztypinleaves",
+    "up": "tezt_dummi_mod:blocks/ztypinleaves",
+    "north": "tezt_dummi_mod:blocks/ztypinleaves",
+    "east": "tezt_dummi_mod:blocks/ztypinleaves",
+    "south": "tezt_dummi_mod:blocks/ztypinleaves",
+    "west": "tezt_dummi_mod:blocks/ztypinleaves",
     "particle": "tezt_dummi_mod:blocks/ztypinleaves"
   }
 }

@@ -15,8 +15,7 @@
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "blockBase": "Leaves",
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
@@ -46,7 +45,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "LEAVES"
+      "value": "GRASS"
     },
     "tickRate": 10,
     "tickRandomly": false,

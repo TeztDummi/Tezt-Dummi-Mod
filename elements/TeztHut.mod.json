@@ -10,8 +10,8 @@
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
     "spawnHeightOffset": -14,
-    "spawnXOffset": 0,
-    "spawnZOffset": 0,
+    "spawnXOffset": 5,
+    "spawnZOffset": 5,
     "spawnWorldTypes": [
       "CUSTOM:DummiDimension",
       "Surface"

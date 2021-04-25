@@ -1,0 +1,27 @@
+{
+  "_fv": 13,
+  "_type": "fluid",
+  "definition": {
+    "name": "Code",
+    "textureStill": "codestillnew",
+    "textureFlowing": "codeflow",
+    "luminosity": 6,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": false,
+    "type": "WATER",
+    "generateBucket": true,
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "frequencyOnChunks": 1,
+    "spawnWorldTypes": [
+      "Surface",
+      "CUSTOM:Simulation"
+    ],
+    "restrictionBiomes": [],
+    "onEntityCollides": {
+      "name": "CodeMobplayerCollidesBlock"
+    }
+  }
+}
