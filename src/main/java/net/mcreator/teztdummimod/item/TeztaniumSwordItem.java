@@ -24,7 +24,7 @@ public class TeztaniumSwordItem extends TeztDummiModModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new SwordItem(new IItemTier() {
 			public int getMaxUses() {
-				return 95;
+				return 3000;
 			}
 
 			public float getEfficiency() {
@@ -40,7 +40,7 @@ public class TeztaniumSwordItem extends TeztDummiModModElements.ModElement {
 			}
 
 			public int getEnchantability() {
-				return 7;
+				return 20;
 			}
 
 			public Ingredient getRepairMaterial() {

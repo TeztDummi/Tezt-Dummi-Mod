@@ -3,10 +3,10 @@ package net.mcreator.teztdummimod.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -27,7 +27,7 @@ public class TypinFenceGateBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:typin_fence_gate")
 	public static final Block block = null;
 	public TypinFenceGateBlock(TeztDummiModModElements instance) {
-		super(instance, 101);
+		super(instance, 47);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class TypinFenceGateBlock extends TeztDummiModModElements.ModElement {
 	}
 	public static class CustomBlock extends FenceGateBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).lightValue(0));
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0));
 			setRegistryName("typin_fence_gate");
 		}
 

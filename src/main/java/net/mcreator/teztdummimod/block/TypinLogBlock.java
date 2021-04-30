@@ -5,10 +5,10 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.IPlantable;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -28,7 +28,7 @@ public class TypinLogBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:typin_log")
 	public static final Block block = null;
 	public TypinLogBlock(TeztDummiModModElements instance) {
-		super(instance, 95);
+		super(instance, 42);
 	}
 
 	@Override
@@ -39,8 +39,8 @@ public class TypinLogBlock extends TeztDummiModModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).lightValue(0).harvestLevel(0)
-					.harvestTool(ToolType.AXE));
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).setLightLevel(s -> 0).harvestLevel(0)
+					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("typin_log");
 		}
 

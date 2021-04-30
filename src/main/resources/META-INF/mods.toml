@@ -1,18 +1,22 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[36,)"
+license="Not specified"
 
 [[mods]]
 modId="tezt_dummi_mod"
 version="1.0.0"
 displayName="Tezt Dummi Mod"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+credits="Made with Mcreator show them some love <3"
 displayURL="https://mcreator.net"
-authors="nintu, MCreator"
+authors="Tezt Dummi, Typin Man"
+description='''
+Poggers
+'''
 
 [[dependencies.tezt_dummi_mod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
 

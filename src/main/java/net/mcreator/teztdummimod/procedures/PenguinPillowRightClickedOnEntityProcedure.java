@@ -8,6 +8,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.mcreator.teztdummimod.TeztDummiModModElements;
+import net.mcreator.teztdummimod.TeztDummiModMod;
 
 import java.util.Map;
 import java.util.Iterator;
@@ -15,13 +16,13 @@ import java.util.Iterator;
 @TeztDummiModModElements.ModElement.Tag
 public class PenguinPillowRightClickedOnEntityProcedure extends TeztDummiModModElements.ModElement {
 	public PenguinPillowRightClickedOnEntityProcedure(TeztDummiModModElements instance) {
-		super(instance, 113);
+		super(instance, 122);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
-				System.err.println("Failed to load dependency sourceentity for procedure PenguinPillowRightClickedOnEntity!");
+				TeztDummiModMod.LOGGER.warn("Failed to load dependency sourceentity for procedure PenguinPillowRightClickedOnEntity!");
 			return;
 		}
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");

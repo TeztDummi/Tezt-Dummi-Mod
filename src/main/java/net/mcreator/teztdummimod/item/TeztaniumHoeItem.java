@@ -46,7 +46,7 @@ public class TeztaniumHoeItem extends TeztDummiModModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(TeztaniumItem.block, (int) (1)));
 			}
-		}, -3f, new Item.Properties().group(TeztDummiModItemGroup.tab)) {
+		}, 0, -3f, new Item.Properties().group(TeztDummiModItemGroup.tab)) {
 		}.setRegistryName("teztanium_hoe"));
 	}
 }

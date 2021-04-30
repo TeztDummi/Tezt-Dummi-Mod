@@ -1,0 +1,16 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tezt_dummi_mod:teztanium"
+    },
+    {
+      "item": "tezt_dummi_mod:virus"
+    }
+  ],
+  "result": {
+    "item": "tezt_dummi_mod:glitchy_teztanium",
+    "count": 1
+  }
+}

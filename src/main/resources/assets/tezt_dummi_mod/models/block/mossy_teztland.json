@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tezt_dummi_mod:blocks/mossyteztlandbottom",
+    "up": "tezt_dummi_mod:blocks/mossyteztlandtop",
+    "north": "tezt_dummi_mod:blocks/mossyteztland",
+    "east": "tezt_dummi_mod:blocks/mossyteztland",
+    "south": "tezt_dummi_mod:blocks/mossyteztland",
+    "west": "tezt_dummi_mod:blocks/mossyteztland",
+    "particle": "tezt_dummi_mod:blocks/mossyteztlandbottom"
+  }
+}

@@ -20,7 +20,7 @@ public class BagOfChipsItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:bag_of_chips")
 	public static final Item block = null;
 	public BagOfChipsItem(TeztDummiModModElements instance) {
-		super(instance, 34);
+		super(instance, 36);
 	}
 
 	@Override

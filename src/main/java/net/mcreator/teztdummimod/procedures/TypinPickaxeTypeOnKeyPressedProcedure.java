@@ -10,24 +10,25 @@ import net.minecraft.entity.Entity;
 import net.mcreator.teztdummimod.item.TypinPickaxeItem;
 import net.mcreator.teztdummimod.TeztDummiModModVariables;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
+import net.mcreator.teztdummimod.TeztDummiModMod;
 
 import java.util.Map;
 
 @TeztDummiModModElements.ModElement.Tag
 public class TypinPickaxeTypeOnKeyPressedProcedure extends TeztDummiModModElements.ModElement {
 	public TypinPickaxeTypeOnKeyPressedProcedure(TeztDummiModModElements instance) {
-		super(instance, 119);
+		super(instance, 128);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure TypinPickaxeTypeOnKeyPressed!");
+				TeztDummiModMod.LOGGER.warn("Failed to load dependency entity for procedure TypinPickaxeTypeOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure TypinPickaxeTypeOnKeyPressed!");
+				TeztDummiModMod.LOGGER.warn("Failed to load dependency world for procedure TypinPickaxeTypeOnKeyPressed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -37,13 +38,13 @@ public class TypinPickaxeTypeOnKeyPressedProcedure extends TeztDummiModModElemen
 			if (((TeztDummiModModVariables.MapVariables.get(world).TypinPickaxeType) == 0)) {
 				TeztDummiModModVariables.MapVariables.get(world).TypinPickaxeType = (double) 1;
 				TeztDummiModModVariables.MapVariables.get(world).syncData(world);
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("3x3 Mode On"), (true));
 				}
 			} else if (((TeztDummiModModVariables.MapVariables.get(world).TypinPickaxeType) == 1)) {
 				TeztDummiModModVariables.MapVariables.get(world).TypinPickaxeType = (double) 0;
 				TeztDummiModModVariables.MapVariables.get(world).syncData(world);
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("3x3 Mode Off"), (true));
 				}
 			}

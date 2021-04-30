@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "mob",
   "definition": {
     "mobName": "Typin Bug",
@@ -71,17 +71,22 @@
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": "CUSTOM:Chip"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:typinbugnutural"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:typinbughurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:typinbugdeath"
     },
     "stepSound": {
       "value": ""
@@ -108,13 +113,20 @@
       "value": ""
     },
     "rangedItemType": "KeyCannon",
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 20,
+    "spawningProbability": 1,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:SimulationPlains"
+      },
+      {
+        "value": "CUSTOM:SimulationHills"
+      }
+    ],
     "spawnInDungeons": false
   }
 }

@@ -1,24 +1,7 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "dimension",
   "definition": {
-    "portalFrame": {
-      "value": "CUSTOM:TeztDummiEssenceBlock"
-    },
-    "portalParticles": {
-      "value": "COMPOSTER"
-    },
-    "portalLuminance": 0.2,
-    "portalSound": {
-      "value": ""
-    },
-    "igniterName": "Ignitey Stick",
-    "igniterTab": {
-      "value": "CUSTOM:TeztDummiMod"
-    },
-    "texture": "igniteystick",
-    "portalTexture": "teztdummiportal",
-    "enablePortal": true,
     "biomesInDimension": [
       {
         "value": "CUSTOM:Tezlands"
@@ -37,11 +20,27 @@
     },
     "canRespawnHere": true,
     "hasFog": false,
-    "hasWeather": false,
     "isDark": false,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": false,
-    "imitateOverworldBehaviour": false
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "CUSTOM:TeztDummiEssenceBlock"
+    },
+    "portalParticles": {
+      "value": "COMPOSTER"
+    },
+    "portalLuminance": 3,
+    "portalSound": {
+      "value": ""
+    },
+    "igniterName": "Ignitey Stick",
+    "igniterTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "texture": "igniteystick",
+    "portalTexture": "teztdummiportal",
+    "enablePortal": true
   }
 }

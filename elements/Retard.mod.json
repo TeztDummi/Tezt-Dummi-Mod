@@ -1,0 +1,22 @@
+{
+  "_fv": 18,
+  "_type": "potion",
+  "definition": {
+    "name": "Retard",
+    "effectName": "Retard",
+    "icon": "zretardicon.png",
+    "color": {
+      "value": -16738048,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "registerPotionType": true,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "RetardOnPotionActiveTick"
+    }
+  }
+}

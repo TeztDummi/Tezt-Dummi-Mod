@@ -2,50 +2,47 @@
 package net.mcreator.teztdummimod.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.feature.LakesFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.BlockStateFeatureConfig;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.ISeedReader;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.item.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.BucketItem;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FlowingFluid;
-import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.teztdummimod.world.dimension.SimulationDimension;
-import net.mcreator.teztdummimod.procedures.CodeMobplayerCollidesBlockProcedure;
 import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
 
 @TeztDummiModModElements.ModElement.Tag
 public class CodeBlock extends TeztDummiModModElements.ModElement {
@@ -57,16 +54,18 @@ public class CodeBlock extends TeztDummiModModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public CodeBlock(TeztDummiModModElements instance) {
-		super(instance, 120);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		super(instance, 49);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
-
-	@SubscribeEvent
-	public void registerFluids(RegistryEvent.Register<Fluid> event) {
-		event.getRegistry().register(still);
-		event.getRegistry().register(flowing);
+	private static class FluidRegisterHandler {
+		@SubscribeEvent
+		public void registerFluids(RegistryEvent.Register<Fluid> event) {
+			event.getRegistry().register(still);
+			event.getRegistry().register(flowing);
+		}
 	}
-
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
@@ -83,46 +82,36 @@ public class CodeBlock extends TeztDummiModModElements.ModElement {
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("code");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("code_flowing");
 		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
-			@Override
-			public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-				super.onEntityCollision(state, world, pos, entity);
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					CodeMobplayerCollidesBlockProcedure.executeProcedure($_dependencies);
-				}
-			}
 		}.setRegistryName("code"));
 		elements.items
 				.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(TeztDummiModItemGroup.tab))
 						.setRegistryName("code_bucket"));
 	}
-
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			biome.addFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, new LakesFeature(BlockStateFeatureConfig::deserialize) {
+	private static Feature<BlockStateFeatureConfig> feature = null;
+	private static ConfiguredFeature<?, ?> configuredFeature = null;
+	private static class FeatureRegisterHandler {
+		@SubscribeEvent
+		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
+			feature = new LakesFeature(BlockStateFeatureConfig.field_236455_a_) {
 				@Override
-				public boolean place(IWorld world, ChunkGenerator generator, Random rand, BlockPos pos, BlockStateFeatureConfig config) {
-					DimensionType dimensionType = world.getDimension().getType();
+				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, BlockStateFeatureConfig config) {
+					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == DimensionType.OVERWORLD)
-						dimensionCriteria = true;
-					if (dimensionType == SimulationDimension.type)
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("tezt_dummi_mod:simulation")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					return super.place(world, generator, rand, pos, config);
+					return super.generate(world, generator, rand, pos, config);
 				}
-			}.withConfiguration(new BlockStateFeatureConfig(block.getDefaultState()))
-					.withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(1))));
+			};
+			configuredFeature = feature.withConfiguration(new BlockStateFeatureConfig(block.getDefaultState()))
+					.withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(4)));
+			event.getRegistry().register(feature.setRegistryName("code_lakes"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("tezt_dummi_mod:code_lakes"), configuredFeature);
 		}
+	}
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		event.getGeneration().getFeatures(GenerationStage.Decoration.LOCAL_MODIFICATIONS).add(() -> configuredFeature);
 	}
 }

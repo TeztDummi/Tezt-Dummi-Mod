@@ -26,7 +26,7 @@ public class VirusContainerItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:virus_container")
 	public static final Item block = null;
 	public VirusContainerItem(TeztDummiModModElements instance) {
-		super(instance, 128);
+		super(instance, 54);
 	}
 
 	@Override

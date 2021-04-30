@@ -8,6 +8,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.mcreator.teztdummimod.TeztDummiModModElements;
+import net.mcreator.teztdummimod.TeztDummiModMod;
 
 import java.util.Map;
 import java.util.Iterator;
@@ -15,13 +16,13 @@ import java.util.Iterator;
 @TeztDummiModModElements.ModElement.Tag
 public class TypinManEntityDiesProcedure extends TeztDummiModModElements.ModElement {
 	public TypinManEntityDiesProcedure(TeztDummiModModElements instance) {
-		super(instance, 89);
+		super(instance, 109);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure TypinManEntityDies!");
+				TeztDummiModMod.LOGGER.warn("Failed to load dependency entity for procedure TypinManEntityDies!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

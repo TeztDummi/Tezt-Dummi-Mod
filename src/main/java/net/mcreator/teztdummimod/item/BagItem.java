@@ -16,7 +16,7 @@ public class BagItem extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:bag")
 	public static final Item block = null;
 	public BagItem(TeztDummiModModElements instance) {
-		super(instance, 35);
+		super(instance, 37);
 	}
 
 	@Override

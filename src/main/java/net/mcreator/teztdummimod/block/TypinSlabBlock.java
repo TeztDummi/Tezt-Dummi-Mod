@@ -3,11 +3,11 @@ package net.mcreator.teztdummimod.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.state.properties.SlabType;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -28,7 +28,7 @@ public class TypinSlabBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:typin_slab")
 	public static final Block block = null;
 	public TypinSlabBlock(TeztDummiModModElements instance) {
-		super(instance, 99);
+		super(instance, 45);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class TypinSlabBlock extends TeztDummiModModElements.ModElement {
 	}
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).lightValue(0));
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0));
 			setRegistryName("typin_slab");
 		}
 

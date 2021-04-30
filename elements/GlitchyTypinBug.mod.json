@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "mob",
   "definition": {
     "mobName": "Glitchy Typin Bug",
@@ -71,17 +71,22 @@
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:glitchytypinbug"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:glitchytypinbug"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:glitchytypinbug"
     },
     "stepSound": {
       "value": ""

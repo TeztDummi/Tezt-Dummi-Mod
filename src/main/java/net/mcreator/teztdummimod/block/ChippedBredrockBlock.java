@@ -4,7 +4,7 @@ package net.mcreator.teztdummimod.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -25,7 +25,7 @@ public class ChippedBredrockBlock extends TeztDummiModModElements.ModElement {
 	@ObjectHolder("tezt_dummi_mod:chipped_bredrock")
 	public static final Block block = null;
 	public ChippedBredrockBlock(TeztDummiModModElements instance) {
-		super(instance, 36);
+		super(instance, 38);
 	}
 
 	@Override
@@ -36,8 +36,8 @@ public class ChippedBredrockBlock extends TeztDummiModModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1000f, 10f).lightValue(0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1000f, 10f).setLightLevel(s -> 0)
+					.harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("chipped_bredrock");
 		}
 

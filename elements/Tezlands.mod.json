@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "biome",
   "definition": {
     "name": "Teztlands",
@@ -8,22 +8,6 @@
     },
     "undergroundBlock": {
       "value": "CUSTOM:Teztland"
-    },
-    "treeType": 1,
-    "vanillaTreeType": "Big trees",
-    "minHeight": 3,
-    "spawnVines": false,
-    "treeVines": {
-      "value": "Blocks.AIR"
-    },
-    "treeStem": {
-      "value": "CUSTOM:TeztyLog"
-    },
-    "treeBranch": {
-      "value": "CUSTOM:TeztyLeaves"
-    },
-    "treeFruits": {
-      "value": "Blocks.AIR"
     },
     "airColor": {
       "value": -3342388,
@@ -45,26 +29,61 @@
       "value": -16764109,
       "falpha": 0.0
     },
-    "treesPerChunk": 1,
-    "grassPerChunk": 0,
-    "seagrassPerChunk": 20,
-    "flowersPerChunk": 4,
-    "mushroomsPerChunk": 0,
-    "bigMushroomsChunk": 0,
-    "sandPathcesPerChunk": 0,
-    "gravelPatchesPerChunk": 0,
-    "reedsPerChunk": 0,
-    "cactiPerChunk": 0,
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 0,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:Glitch"
+    },
+    "particlesProbability": 0.0,
+    "biomeCategory": "PLAINS",
+    "parent": {
+      "value": "No parent"
+    },
     "rainingPossibility": 0.5,
     "temperature": 0.5,
     "baseHeight": 0.1,
     "heightVariation": 0.5,
+    "biomeType": "WARM",
     "spawnBiome": true,
     "biomeWeight": 25,
-    "biomeType": "WARM",
-    "biomeCategory": "NONE",
-    "parent": {
-      "value": "No parent"
+    "biomeDictionaryTypes": [],
+    "grassPerChunk": 0,
+    "seagrassPerChunk": 20,
+    "flowersPerChunk": 0,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPatchesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "treesPerChunk": 1,
+    "vanillaTreeType": "Savanna trees",
+    "treeType": 1,
+    "minHeight": 3,
+    "maxWaterDepth": 0,
+    "treeStem": {
+      "value": "CUSTOM:TeztyLog"
+    },
+    "treeBranch": {
+      "value": "CUSTOM:TeztyLeaves"
+    },
+    "treeVines": {
+      "value": "Blocks.AIR"
+    },
+    "treeFruits": {
+      "value": "Blocks.AIR"
     },
     "spawnStronghold": false,
     "spawnMineshaft": false,
@@ -77,7 +96,6 @@
     "spawnOceanMonument": false,
     "spawnShipwreck": false,
     "oceanRuinType": "NONE",
-    "biomeDictionaryTypes": [],
     "defaultFeatures": [
       "Caves",
       "MonsterRooms",

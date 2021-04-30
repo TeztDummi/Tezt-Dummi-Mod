@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 18,
   "_type": "mob",
   "definition": {
     "mobName": "Penguin Pillow",
@@ -21,7 +21,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:TeztDummiMod"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -71,6 +71,11 @@
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
@@ -95,6 +100,9 @@
     "particleAmount": 4,
     "onRightClickedOn": {
       "name": "PenguinPillowRightClickedOnEntity"
+    },
+    "onInitialSpawn": {
+      "name": "PenguinPillowOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

@@ -31,7 +31,7 @@ public class TypinPickaxeTypeKeyBinding extends TeztDummiModModElements.ModEleme
 	@OnlyIn(Dist.CLIENT)
 	private KeyBinding keys;
 	public TypinPickaxeTypeKeyBinding(TeztDummiModModElements instance) {
-		super(instance, 119);
+		super(instance, 129);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}
@@ -39,7 +39,7 @@ public class TypinPickaxeTypeKeyBinding extends TeztDummiModModElements.ModEleme
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.typin_pickaxe_type", GLFW.GLFW_KEY_Y, "key.categories.misc");
+		keys = new KeyBinding("key.tezt_dummi_mod.typin_pickaxe_type", GLFW.GLFW_KEY_Y, "key.categories.misc");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

@@ -31,7 +31,7 @@ public class PenginPillowFlapKeyBinding extends TeztDummiModModElements.ModEleme
 	@OnlyIn(Dist.CLIENT)
 	private KeyBinding keys;
 	public PenginPillowFlapKeyBinding(TeztDummiModModElements instance) {
-		super(instance, 118);
+		super(instance, 127);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}
@@ -39,7 +39,7 @@ public class PenginPillowFlapKeyBinding extends TeztDummiModModElements.ModEleme
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.penguin_pillow_flap", GLFW.GLFW_KEY_Y, "key.categories.misc");
+		keys = new KeyBinding("key.tezt_dummi_mod.penguin_pillow_flap", GLFW.GLFW_KEY_Y, "key.categories.misc");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

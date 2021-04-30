@@ -1,7 +1,7 @@
 package net.mcreator.teztdummimod.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
@@ -16,6 +16,7 @@ import net.minecraft.advancements.Advancement;
 
 import net.mcreator.teztdummimod.item.TeztaniumArmorItem;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
+import net.mcreator.teztdummimod.TeztDummiModMod;
 
 import java.util.Map;
 import java.util.Iterator;
@@ -24,14 +25,14 @@ import java.util.HashMap;
 @TeztDummiModModElements.ModElement.Tag
 public class CoverMeInTeztDummiAcheivementProcedure extends TeztDummiModModElements.ModElement {
 	public CoverMeInTeztDummiAcheivementProcedure(TeztDummiModModElements instance) {
-		super(instance, 92);
+		super(instance, 112);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure CoverMeInTeztDummiAcheivement!");
+				TeztDummiModMod.LOGGER.warn("Failed to load dependency entity for procedure CoverMeInTeztDummiAcheivement!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -99,21 +100,21 @@ public class CoverMeInTeztDummiAcheivementProcedure extends TeztDummiModModEleme
 	}
 
 	@SubscribeEvent
-	public void onPickup(EntityItemPickupEvent event) {
-		PlayerEntity entity = event.getPlayer();
-		ItemStack itemstack = event.getItem().getItem();
-		double i = entity.getPosX();
-		double j = entity.getPosY();
-		double k = entity.getPosZ();
-		World world = entity.world;
-		Map<String, Object> dependencies = new HashMap<>();
-		dependencies.put("x", i);
-		dependencies.put("y", j);
-		dependencies.put("z", k);
-		dependencies.put("world", world);
-		dependencies.put("entity", entity);
-		dependencies.put("itemstack", itemstack);
-		dependencies.put("event", event);
-		this.executeProcedure(dependencies);
+	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		if (event.phase == TickEvent.Phase.END) {
+			Entity entity = event.player;
+			World world = entity.world;
+			double i = entity.getPosX();
+			double j = entity.getPosY();
+			double k = entity.getPosZ();
+			Map<String, Object> dependencies = new HashMap<>();
+			dependencies.put("x", i);
+			dependencies.put("y", j);
+			dependencies.put("z", k);
+			dependencies.put("world", world);
+			dependencies.put("entity", entity);
+			dependencies.put("event", event);
+			this.executeProcedure(dependencies);
+		}
 	}
 }

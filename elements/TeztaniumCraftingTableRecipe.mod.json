@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Teztanium"
+      },
+      {
+        "value": "CUSTOM:GlitchyTeztanium"
+      },
+      {
+        "value": "CUSTOM:Teztanium"
+      },
+      {
+        "value": "CUSTOM:GlitchyTeztanium"
+      },
+      {
+        "value": "Blocks.CRAFTING_TABLE"
+      },
+      {
+        "value": "CUSTOM:GlitchyTeztanium"
+      },
+      {
+        "value": "CUSTOM:Teztanium"
+      },
+      {
+        "value": "CUSTOM:GlitchyTeztanium"
+      },
+      {
+        "value": "CUSTOM:Teztanium"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TeztaniumCraftingTable"
+    },
+    "name": "teztanium_crafting_table_recipe",
+    "namespace": "mod"
+  }
+}

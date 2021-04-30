@@ -17,7 +17,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.biome.Biome;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tags.Tag;
 import net.minecraft.network.PacketBuffer;
@@ -43,19 +42,35 @@ public class TeztDummiModModElements {
 	public final List<ModElement> elements = new ArrayList<>();
 	public final List<Supplier<Block>> blocks = new ArrayList<>();
 	public final List<Supplier<Item>> items = new ArrayList<>();
-	public final List<Supplier<Biome>> biomes = new ArrayList<>();
 	public final List<Supplier<EntityType<?>>> entities = new ArrayList<>();
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public TeztDummiModModElements() {
-		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummideath"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummideath")));
-		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummihurt"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummihurt")));
-		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdumminutural"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdumminutural")));
 		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummihaha"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummihaha")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdumminutural"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdumminutural")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummihurt"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummihurt")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "teztdummideath"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "teztdummideath")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "typinbugnutural"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "typinbugnutural")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "typinbughurt"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "typinbughurt")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "typinbugdeath"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "typinbugdeath")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "glitchytypinbug"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "glitchytypinbug")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "virusextract"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "virusextract")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "virusblock"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "virusblock")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "virtualgrass"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "virtualgrass")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "virtualblock"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "virtualblock")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "code"), new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "code")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("tezt_dummi_mod").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
@@ -95,10 +110,6 @@ public class TeztDummiModModElements {
 
 	public List<Supplier<Item>> getItems() {
 		return items;
-	}
-
-	public List<Supplier<Biome>> getBiomes() {
-		return biomes;
 	}
 
 	public List<Supplier<EntityType<?>>> getEntities() {

@@ -13,7 +13,7 @@ import net.mcreator.teztdummimod.TeztDummiModModElements;
 @TeztDummiModModElements.ModElement.Tag
 public class TeztDummiModItemGroup extends TeztDummiModModElements.ModElement {
 	public TeztDummiModItemGroup(TeztDummiModModElements instance) {
-		super(instance, 81);
+		super(instance, 101);
 	}
 
 	@Override
