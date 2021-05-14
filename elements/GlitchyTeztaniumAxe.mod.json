@@ -1,0 +1,34 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "glitchyshovel",
+    "customModelName": "Normal",
+    "name": "Glitchy Teztanium Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 5,
+    "efficiency": 15.0,
+    "attackSpeed": 1.0,
+    "enchantability": 25,
+    "damageVsEntity": 5.0,
+    "usageCount": 3000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:GlitchyTeztanium"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "GlitchyTeztaniumAxeBlockDestroyedWithTool"
+    }
+  }
+}

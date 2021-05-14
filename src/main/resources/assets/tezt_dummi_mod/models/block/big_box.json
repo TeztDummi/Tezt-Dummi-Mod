@@ -1,0 +1,9 @@
+{
+  "parent": "tezt_dummi_mod:custom/big_box_2",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/barell",
+    "particle": "tezt_dummi_mod:blocks/barell",
+    "0": "tezt_dummi_mod:blocks/barell",
+    "missing": "tezt_dummi_mod:blocks/barell"
+  }
+}

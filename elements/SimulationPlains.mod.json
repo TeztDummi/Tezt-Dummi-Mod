@@ -42,11 +42,11 @@
       "value": ""
     },
     "moodSoundDelay": 0,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "CUSTOM:Glitch"
+      "value": "CUSTOM:ZeroOne"
     },
-    "particlesProbability": 0.0,
+    "particlesProbability": 1.0,
     "biomeCategory": "NONE",
     "parent": {
       "value": "No parent"
@@ -54,7 +54,7 @@
     "rainingPossibility": 0.0,
     "temperature": 0.5,
     "baseHeight": 0.1,
-    "heightVariation": 0.2,
+    "heightVariation": 0.05,
     "biomeType": "WARM",
     "spawnBiome": false,
     "biomeWeight": 10,

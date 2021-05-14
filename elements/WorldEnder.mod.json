@@ -1,0 +1,45 @@
+{
+  "_fv": 18,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "zpog",
+    "customModelName": "Normal",
+    "name": "World Ender",
+    "specialInfo": [
+      "DONT THROW"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "stackSize": 16,
+    "ammoItem": {
+      "value": "CUSTOM:WorldEnder"
+    },
+    "shootConstantly": true,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "CUSTOM:woooooooooo"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 2.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 5,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:WorldEnder"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "WorldEnderBulletHitsBlock"
+    },
+    "onBulletHitsEntity": {
+      "name": "WorldEnderBulletHitsBlock"
+    }
+  }
+}

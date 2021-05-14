@@ -71,6 +71,12 @@ public class TeztDummiModModElements {
 		sounds.put(new ResourceLocation("tezt_dummi_mod", "virtualblock"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "virtualblock")));
 		sounds.put(new ResourceLocation("tezt_dummi_mod", "code"), new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "code")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "woooooooooo"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "woooooooooo")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "bestclipever"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "bestclipever")));
+		sounds.put(new ResourceLocation("tezt_dummi_mod", "funnymememe"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tezt_dummi_mod", "funnymememe")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("tezt_dummi_mod").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

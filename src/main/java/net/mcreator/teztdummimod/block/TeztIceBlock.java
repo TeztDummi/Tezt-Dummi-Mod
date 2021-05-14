@@ -49,8 +49,8 @@ public class TeztIceBlock extends TeztDummiModModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.PACKED_ICE).sound(SoundType.GLASS).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0).notSolid()
-					.setOpaque((bs, br, bp) -> false));
+			super(Block.Properties.create(Material.PACKED_ICE).sound(SoundType.GLASS).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0)
+					.slipperiness(0.989f).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("tezt_ice");
 		}
 

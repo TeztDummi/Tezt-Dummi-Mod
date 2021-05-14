@@ -61,7 +61,7 @@ public class IcyTeztLandsBiome extends TeztDummiModModElements.ModElement {
 				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
 				biome = new Biome.Builder().precipitation(Biome.RainType.SNOW).category(Biome.Category.OCEAN).depth(0.1f).scale(0.01f)
-						.temperature(0.1f).downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
+						.temperature(0.1f).downfall(1f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
 				event.getRegistry().register(biome.setRegistryName("tezt_dummi_mod:icy_tezt_lands"));
 			}

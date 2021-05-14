@@ -93,6 +93,7 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 			super(type, world);
 			experienceValue = 7035;
 			setNoAI(false);
+			enablePersistence();
 			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(KeyCannonItem.block, (int) (1)));
 			this.setItemStackToSlot(EquipmentSlotType.HEAD, new ItemStack(TeztaniumArmorItem.helmet, (int) (1)));
 			this.setItemStackToSlot(EquipmentSlotType.CHEST, new ItemStack(TeztaniumArmorItem.body, (int) (1)));
@@ -124,6 +125,11 @@ public class TypinManEntity extends TeztDummiModModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
+		}
+
+		@Override
+		public boolean canDespawn(double distanceToClosestPlayer) {
+			return false;
 		}
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {

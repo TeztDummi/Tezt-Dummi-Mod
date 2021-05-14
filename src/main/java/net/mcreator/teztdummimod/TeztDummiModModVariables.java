@@ -84,7 +84,7 @@ public class TeztDummiModModVariables {
 		public static final String DATA_NAME = "tezt_dummi_mod_mapvars";
 		public double Attacknumber = 0.0;
 		public double TypinPickaxeType = 0;
-		public double HasteActivator = 30.0;
+		public double HasteActivator = 0.0;
 		public MapVariables() {
 			super(DATA_NAME);
 		}

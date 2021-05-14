@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "gappy_gunne",
+    "customModelName": "Normal",
+    "name": "Grapple Gun",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 1,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "ModelGrapple",
+    "customBulletModelTexture": "penguin_hat.png",
+    "onBulletHitsBlock": {
+      "name": "GrappleGunBulletHitsBlock"
+    },
+    "onBulletHitsEntity": {
+      "name": "GrappleGunBulletHitsBlock"
+    },
+    "onBulletFlyingTick": {
+      "name": "GrappleGunWhileBulletFlyingTick"
+    }
+  }
+}

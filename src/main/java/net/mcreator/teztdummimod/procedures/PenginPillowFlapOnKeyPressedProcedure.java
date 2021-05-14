@@ -4,7 +4,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.teztdummimod.entity.WhitePenguinPillowEntity;
 import net.mcreator.teztdummimod.entity.PenguinPillowEntity;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 import net.mcreator.teztdummimod.TeztDummiModMod;
@@ -53,17 +52,6 @@ public class PenginPillowFlapOnKeyPressedProcedure extends TeztDummiModModElemen
 		if ((entity.isPassenger())) {
 			if ((((Entity) world
 					.getEntitiesWithinAABB(PenguinPillowEntity.CustomEntity.class,
-							new AxisAlignedBB(x - (0.1 / 2d), y - (0.1 / 2d), z - (0.1 / 2d), x + (0.1 / 2d), y + (0.1 / 2d), z + (0.1 / 2d)), null)
-					.stream().sorted(new Object() {
-						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-						}
-					}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null)) {
-				(entity.getRidingEntity()).setMotion(((entity.getRidingEntity()).getMotion().getX()), 1,
-						((entity.getRidingEntity()).getMotion().getZ()));
-			}
-			if ((((Entity) world
-					.getEntitiesWithinAABB(WhitePenguinPillowEntity.CustomEntity.class,
 							new AxisAlignedBB(x - (0.1 / 2d), y - (0.1 / 2d), z - (0.1 / 2d), x + (0.1 / 2d), y + (0.1 / 2d), z + (0.1 / 2d)), null)
 					.stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {

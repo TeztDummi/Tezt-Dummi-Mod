@@ -36,7 +36,7 @@ public class GlitchyTeztaniumPickaxeItem extends TeztDummiModModElements.ModElem
 			}
 
 			public float getEfficiency() {
-				return 12f;
+				return 15f;
 			}
 
 			public float getAttackDamage() {
@@ -63,6 +63,8 @@ public class GlitchyTeztaniumPickaxeItem extends TeztDummiModModElements.ModElem
 				int z = pos.getZ();
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("world", world);
 					GlitchyTeztaniumPickaxeBlockDestroyedWithToolProcedure.executeProcedure($_dependencies);
 				}
 				return retval;

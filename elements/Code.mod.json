@@ -18,6 +18,9 @@
     "spawnWorldTypes": [
       "CUSTOM:Simulation"
     ],
-    "restrictionBiomes": []
+    "restrictionBiomes": [],
+    "onEntityCollides": {
+      "name": "CodeMobplayerCollidesBlock"
+    }
   }
 }

@@ -208,5 +208,35 @@
         "stream": false
       }
     ]
+  },
+  "woooooooooo": {
+    "category": "master",
+    "subtitle": "subtitles.woooooooooo",
+    "sounds": [
+      {
+        "name": "tezt_dummi_mod:zwoooo",
+        "stream": false
+      }
+    ]
+  },
+  "bestclipever": {
+    "category": "record",
+    "subtitle": "subtitles.bestclipever",
+    "sounds": [
+      {
+        "name": "tezt_dummi_mod:yesssssssssssssssssss_1",
+        "stream": true
+      }
+    ]
+  },
+  "funnymememe": {
+    "category": "record",
+    "subtitle": "subtitles.funnymememe",
+    "sounds": [
+      {
+        "name": "tezt_dummi_mod:poggy_2",
+        "stream": true
+      }
+    ]
   }
 }

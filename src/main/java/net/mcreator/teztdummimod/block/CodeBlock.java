@@ -33,16 +33,21 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BucketItem;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FlowingFluid;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.FlowingFluidBlock;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.teztdummimod.procedures.CodeMobplayerCollidesBlockProcedure;
 import net.mcreator.teztdummimod.itemgroup.TeztDummiModItemGroup;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @TeztDummiModModElements.ModElement.Tag
 public class CodeBlock extends TeztDummiModModElements.ModElement {
@@ -82,6 +87,22 @@ public class CodeBlock extends TeztDummiModModElements.ModElement {
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("code");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("code_flowing");
 		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
+			@Override
+			public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+				super.onEntityCollision(state, world, pos, entity);
+				int x = pos.getX();
+				int y = pos.getY();
+				int z = pos.getZ();
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					CodeMobplayerCollidesBlockProcedure.executeProcedure($_dependencies);
+				}
+			}
 		}.setRegistryName("code"));
 		elements.items
 				.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(TeztDummiModItemGroup.tab))

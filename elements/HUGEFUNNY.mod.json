@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "discpogg",
+    "name": "HUGE FUNNY",
+    "description": "HUGE FUNNY",
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "music": {
+      "value": "CUSTOM:funnymememe"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

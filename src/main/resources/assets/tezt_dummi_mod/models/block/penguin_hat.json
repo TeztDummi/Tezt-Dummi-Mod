@@ -1,0 +1,8 @@
+{
+  "parent": "tezt_dummi_mod:custom/penguin_hat",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/no",
+    "particle": "tezt_dummi_mod:blocks/no",
+    "0": "tezt_dummi_mod:blocks/no"
+  }
+}

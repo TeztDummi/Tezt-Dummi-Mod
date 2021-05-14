@@ -67,7 +67,7 @@ public class TezlandsBiome extends TeztDummiModModElements.ModElement {
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-3342388).setWaterColor(-16738048).setWaterFogColor(-16764109)
-						.withSkyColor(-3342388).withFoliageColor(-1).withGrassColor(-1).build();
+						.withSkyColor(-3342388).withFoliageColor(-16776961).withGrassColor(-16738048).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(TeztlandBlock.block.getDefaultState(),
 								TeztlandBlock.block.getDefaultState(), TeztlandBlock.block.getDefaultState())));

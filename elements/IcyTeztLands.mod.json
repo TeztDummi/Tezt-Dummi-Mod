@@ -49,9 +49,9 @@
     "particlesProbability": 0.0,
     "biomeCategory": "OCEAN",
     "parent": {
-      "value": "frozen_ocean"
+      "value": "ocean"
     },
-    "rainingPossibility": 0.5,
+    "rainingPossibility": 1.0,
     "temperature": 0.1,
     "baseHeight": 0.1,
     "heightVariation": 0.01,

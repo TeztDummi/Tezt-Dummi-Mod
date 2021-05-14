@@ -42,11 +42,11 @@
       "value": ""
     },
     "moodSoundDelay": 0,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "CUSTOM:Glitch"
+      "value": "CUSTOM:ZeroOne"
     },
-    "particlesProbability": 0.0,
+    "particlesProbability": 1.0,
     "biomeCategory": "NONE",
     "parent": {
       "value": "No parent"

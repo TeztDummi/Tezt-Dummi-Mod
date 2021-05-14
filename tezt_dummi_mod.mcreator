@@ -1737,18 +1737,6 @@
       "ids": {},
       "registry_name": "glitchy_teztanium_pickaxe_block_destroyed_with_tool",
       "metadata": {
-        "dependencies": []
-      }
-    },
-    {
-      "name": "HasteActivatorOnKeyPressed",
-      "type": "procedure",
-      "sortid": 150,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "haste_activator_on_key_pressed",
-      "metadata": {
         "dependencies": [
           {
             "name": "entity",
@@ -1760,15 +1748,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "HasteActivator",
-      "type": "keybind",
-      "sortid": 150,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "haste_activator"
     },
     {
       "name": "ThankYou",
@@ -1789,39 +1768,6 @@
       "registry_name": "white_penguin_pillow"
     },
     {
-      "name": "PenguinPillowOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 153,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "penguin_pillow_on_initial_entity_spawn",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "GlitchyVirtualBlockClientDisplayRandomTick",
       "type": "procedure",
       "sortid": 154,
@@ -1829,93 +1775,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "glitchy_virtual_block_client_display_random_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "VirtualGrassEntityWalksOnTheBlock",
-      "type": "procedure",
-      "sortid": 155,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "virtual_grass_entity_walks_on_the_block",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "VirtualBlockEntityWalksOnTheBlock",
-      "type": "procedure",
-      "sortid": 156,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "virtual_block_entity_walks_on_the_block",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CodeUpdateTick",
-      "type": "procedure",
-      "sortid": 157,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "code_update_tick",
       "metadata": {
         "dependencies": [
           {
@@ -2063,6 +1922,378 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "tezt_ice_spire"
+    },
+    {
+      "name": "ZeroOne",
+      "type": "particle",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zero_one"
+    },
+    {
+      "name": "SwampyTeztDummi",
+      "type": "mob",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "swampy_tezt_dummi"
+    },
+    {
+      "name": "IcyTeztDummi",
+      "type": "mob",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "icy_tezt_dummi"
+    },
+    {
+      "name": "WorldEnder",
+      "type": "gun",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "world_ender"
+    },
+    {
+      "name": "WorldEnderBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "world_ender_bullet_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GlitchyTeztaniumShovel",
+      "type": "tool",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glitchy_teztanium_shovel"
+    },
+    {
+      "name": "Crab",
+      "type": "painting",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crab"
+    },
+    {
+      "name": "TheBestThumbnail",
+      "type": "painting",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "the_best_thumbnail"
+    },
+    {
+      "name": "Pog",
+      "type": "painting",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pog"
+    },
+    {
+      "name": "TheBestClipFromBFMIEver",
+      "type": "musicdisc",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "the_best_clip_from_bfmi_ever"
+    },
+    {
+      "name": "HUGEFUNNY",
+      "type": "musicdisc",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hugefunny"
+    },
+    {
+      "name": "GrappleGunWhileBulletFlyingTick",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grapple_gun_while_bullet_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GrappleGun",
+      "type": "gun",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grapple_gun"
+    },
+    {
+      "name": "Grapple",
+      "type": "particle",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grapple"
+    },
+    {
+      "name": "GrappleGunBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grapple_gun_bullet_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThankYouAchievment",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "thank_you_achievment",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GlitchyTeztaniumAxe",
+      "type": "tool",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glitchy_teztanium_axe"
+    },
+    {
+      "name": "GlitchyTeztaniumAxeBlockDestroyedWithTool",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glitchy_teztanium_axe_block_destroyed_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BaterWucketRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bater_wucket_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BaterWucket",
+      "type": "item",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bater_wucket"
+    },
+    {
+      "name": "BigBox",
+      "type": "block",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "big_box"
+    },
+    {
+      "name": "BigBoxGUI",
+      "type": "gui",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "big_box_gui"
+    },
+    {
+      "name": "PenguinHat",
+      "type": "block",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "penguin_hat"
+    },
+    {
+      "name": "PenguinHatOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "penguin_hat_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BaterWucketRecipe",
+      "type": "recipe",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bater_wucket_recipe"
+    },
+    {
+      "name": "BFMICLIPRecipe",
+      "type": "recipe",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bfmiclip_recipe"
+    },
+    {
+      "name": "HUGEFUNNYRECIPE",
+      "type": "recipe",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hugefunnyrecipe"
+    },
+    {
+      "name": "Grappygoonrecipii",
+      "type": "recipe",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grappygoonrecipii"
     }
   ],
   "variable_elements": [
@@ -2082,7 +2313,7 @@
       "name": "HasteActivator",
       "type": "number",
       "scope": "map",
-      "value": "30.0"
+      "value": "0.0"
     }
   ],
   "sound_elements": [
@@ -2209,6 +2440,30 @@
       ],
       "category": "block",
       "subtitle": "Code noises"
+    },
+    {
+      "name": "woooooooooo",
+      "files": [
+        "zwoooo"
+      ],
+      "category": "master",
+      "subtitle": "WOOOOOO"
+    },
+    {
+      "name": "bestclipever",
+      "files": [
+        "yesssssssssssssssssss_1"
+      ],
+      "category": "record",
+      "subtitle": "Best BFMI clip no doubt"
+    },
+    {
+      "name": "funnymememe",
+      "files": [
+        "poggy_2"
+      ],
+      "category": "record",
+      "subtitle": "Funny song :0"
     }
   ],
   "language_map": {
@@ -2237,6 +2492,7 @@
       "item.tezt_dummi_mod.simulation": "Simulation Portal Igniter (Creative)",
       "block.tezt_dummi_mod.tezty_fence": "Tezty Fence",
       "item.tezt_dummi_mod.tezt_dummi_essence_dust": "Tezt Dummi Essence",
+      "item.tezt_dummi_mod.glitchy_teztanium_shovel": "Glitchy Teztanium Shovel",
       "advancements.the_dummi_dimension.title": "The Dummi Dimension",
       "item.tezt_dummi_mod.typin_bug_spawn_egg": "Typin Bug Spawn Egg",
       "advancements.the_teztlands.descr": "Nothing but green",
@@ -2245,11 +2501,13 @@
       "item.tezt_dummi_mod.teztanium_axe": "Teztanium Axe",
       "advancements.cover_me_in_tezt_dummi.title": "Cover Me In Tezt Dummi",
       "biome.tezt_dummi_mod.simulation_hills": "Simulation Hills",
-      "key.tezt_dummi_mod.haste_activator": "Haste Activator",
       "subtitles.typinbughurt": "Typinbug angrily beeps",
       "advancements.fatty.title": "Fatty",
       "item.tezt_dummi_mod.teztanium_pickaxe": "Teztanium Pickaxe",
       "block.tezt_dummi_mod.tezty_wood": "Tezty Wood",
+      "item.tezt_dummi_mod.icy_tezt_dummi_spawn_egg": "Icy Tezt_Dummi Spawn Egg",
+      "subtitles.bestclipever": "Best BFMI clip no doubt",
+      "item.tezt_dummi_mod.glitchy_teztanium_axe": "Glitchy Teztanium Axe",
       "item.tezt_dummi_mod.tezt_dummi_cannon": "Tezt Dummi Cannon",
       "entity.tezt_dummi_mod.hasty_pasty": "Hasty Pasty",
       "block.tezt_dummi_mod.chipped_bredrock": "Chipped Bredrock",
@@ -2261,14 +2519,17 @@
       "item.minecraft.tipped_arrow.effect.retard": "Arrow of Retard",
       "fluid.code": "Code",
       "item.tezt_dummi_mod.glitchy_typin_bug_spawn_egg": "Glitchy Typin Bug Spawn Egg",
+      "item.tezt_dummi_mod.swampy_tezt_dummi_spawn_egg": "Swampy Tezt_Dummi Spawn Egg",
       "item.tezt_dummi_mod.teztanium_ingot": "Teztanium Ingot",
       "item.tezt_dummi_mod.glitchy_teztanium": "Teztanium",
       "item.tezt_dummi_mod.dummi_dimension": "Ignitey Stick",
       "biome.tezt_dummi_mod.tezt_swamps": "Teztswamps",
       "biome.tezt_dummi_mod.simulation_plains": "Simulation Plains",
+      "item.tezt_dummi_mod.grapple_gun": "Grapple Gun",
       "item.tezt_dummi_mod.teztanium": "Teztanium",
       "subtitles.teztdummideath": "Tezt_Dummi commits not feel too good",
       "entity.tezt_dummi_mod.typin_man": "Typin Man",
+      "item.tezt_dummi_mod.world_ender": "World Ender",
       "block.tezt_dummi_mod.tezt_dummi_essence_block": "Block of Tezt Dummi Essence",
       "block.tezt_dummi_mod.typin_slab": "Typin Slab",
       "block.tezt_dummi_mod.tezty_log": "Tezty Log",
@@ -2285,9 +2546,12 @@
       "item.tezt_dummi_mod.glitchy_teztanium_pickaxe": "Glitchy Teztanium Pickaxe",
       "advancements.the_dummi_dimension.descr": "Where am I?",
       "item.tezt_dummi_mod.virus_container": "Virus Container",
+      "subtitles.thebestclipfrombfmiever": "best god damned clip frickin ever like bro really no joke",
+      "item.tezt_dummi_mod.the_best_clip_from_bfmi_ever.desc": "BFMI SE2EP22 2:55 - 3:07",
       "advancements.fatty.descr": "Eat a bag of pun",
       "block.tezt_dummi_mod.typin_leaves": "Typin Leaves",
       "entity.tezt_dummi_mod.white_penguin_pillow": "White Penguin Pillow",
+      "item.tezt_dummi_mod.hugefunny.desc": "HUGE FUNNY",
       "entity.tezt_dummi_mod.typin_bug": "Typin Bug",
       "item.tezt_dummi_mod.virus": "Virus",
       "entity.tezt_dummi_mod.glitchy_typin_bug": "Glitchy Typin Bug",
@@ -2296,18 +2560,21 @@
       "subtitles.glitchytypinbug": "Typin bug is no longer happy with you",
       "key.mcreator.typin_pickaxe_type": "Typin Pickaxe Type",
       "block.tezt_dummi_mod.teztanium_block": "Block of Teztanium",
-      "advancements.thank_you.descr": "Thanks for installing this stupid little mod",
+      "advancements.thank_you.descr": "This mod was made by Tezt Dummi and Typin Man on YouTube!",
       "item.tezt_dummi_mod.teztanium_armor_chestplate": "Teztanium Chestplate",
       "item.tezt_dummi_mod.bag": "Bag",
       "block.tezt_dummi_mod.tezty_leaves": "Tezty Leaves",
+      "entity.tezt_dummi_mod.icy_tezt_dummi": "Icy Tezt_Dummi",
       "item.tezt_dummi_mod.tezty_arrow": "Tezt Rocket",
       "block.tezt_dummi_mod.tezty_rock": "Tezty Rock",
       "item.tezt_dummi_mod.cooked_penguin": "Cooked Penguin",
+      "block.tezt_dummi_mod.big_box": "Big Box",
       "item.minecraft.lingering_potion.effect.retard": "Lingering Retard",
       "advancements.weeeeee.descr": "Craft a Tezt Dummi Cannon",
       "advancements.into_the_sunset.title": "Into The Sunset",
       "biome.tezt_dummi_mod.tezlands": "Teztlands",
       "block.tezt_dummi_mod.tezty_slab": "Tezty Slab",
+      "subtitles.woooooooooo": "WOOOOOO",
       "item.tezt_dummi_mod.glitchy_teztanium_sword": "Glitchy Teztanium Sword",
       "subtitles.teztdummihaha": "Tezt_Dummi laughs at you",
       "item.tezt_dummi_mod.penguin_pillow_spawn_egg": "Penguin Pillow Spawn Egg",
@@ -2318,6 +2585,8 @@
       "subtitles.typinbugdeath": "Error 404 Typinbug no longer exists",
       "subtitles.code": "Code noises",
       "effect.retard": "Retard",
+      "subtitles.funnymememe": "Funny song :0",
+      "item.tezt_dummi_mod.bater_wucket": "Bater Wucket",
       "block.tezt_dummi_mod.tezty_fence_gate": "Tezty Fence Gate",
       "advancements.ai_domination.title": "Ai Domination",
       "block.tezt_dummi_mod.virtual_grass": "Virtual Grass",
@@ -2332,11 +2601,15 @@
       "item.tezt_dummi_mod.teh_dummi_spawn_egg": "Tezt_Dummi Spawn Egg",
       "item.tezt_dummi_mod.teztgore_horn": "Teztgore Horn",
       "block.tezt_dummi_mod.typin_wood": "Typin Wood",
+      "entity.tezt_dummi_mod.swampy_tezt_dummi": "Swampy Tezt_Dummi",
       "entity.tezt_dummi_mod.penguin_pillow": "Penguin Pillow",
       "item.tezt_dummi_mod.code_bucket": "Code Bucket",
       "block.tezt_dummi_mod.tezty_rock_brick": "Tezty Rock Brick",
+      "block.tezt_dummi_mod.penguin_hat": "Penguin Hat",
       "advancements.into_the_sunset.descr": "Drive a Penguin Pillow",
+      "item.tezt_dummi_mod.the_best_clip_from_bfmi_ever": "The Best Clip From BFMI Ever",
       "item.tezt_dummi_mod.bag_of_chips": "Bag Of Chips",
+      "item.tezt_dummi_mod.hugefunny": "HUGE FUNNY",
       "item.tezt_dummi_mod.teztanium_armor_boots": "Teztanium Boots",
       "block.tezt_dummi_mod.typin_stairs": "Typin Stairs",
       "itemGroup.tabtezt_dummi_mod": "Tezt Dummi Mod"

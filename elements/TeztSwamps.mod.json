@@ -14,11 +14,11 @@
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -1,
+      "value": -16751104,
       "falpha": 0.0
     },
     "foliageColor": {
-      "value": -1,
+      "value": -16776961,
       "falpha": 0.0
     },
     "waterColor": {
@@ -68,8 +68,8 @@
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
-    "treesPerChunk": 2,
-    "vanillaTreeType": "Mega spruce trees",
+    "treesPerChunk": 4,
+    "vanillaTreeType": "Savanna trees",
     "treeType": 1,
     "minHeight": 3,
     "maxWaterDepth": 0,

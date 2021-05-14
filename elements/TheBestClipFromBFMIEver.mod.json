@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "disc",
+    "name": "The Best Clip From BFMI Ever",
+    "description": "BFMI SE2EP22 2:55 - 3:07",
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "music": {
+      "value": "CUSTOM:bestclipever"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

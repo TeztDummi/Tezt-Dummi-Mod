@@ -25,6 +25,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.biome.ParticleEffectAmbience;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.BiomeGenerationSettings;
@@ -39,6 +40,7 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.teztdummimod.particle.ZeroOneParticle;
 import net.mcreator.teztdummimod.block.VirtualGrassBlock;
 import net.mcreator.teztdummimod.block.VirtualBlockBlock;
 import net.mcreator.teztdummimod.block.TypinLogBlock;
@@ -63,7 +65,8 @@ public class SimulationHillsBiome extends TeztDummiModModElements.ModElement {
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-16777114).setWaterColor(-16777114).setWaterFogColor(-16777114)
-						.withSkyColor(-16777114).withFoliageColor(-16777114).withGrassColor(-1).build();
+						.withSkyColor(-16777114).withFoliageColor(-16777114).withGrassColor(-1)
+						.setParticle(new ParticleEffectAmbience(ZeroOneParticle.particle, 0.01f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(VirtualGrassBlock.block.getDefaultState(),
 								VirtualBlockBlock.block.getDefaultState(), VirtualBlockBlock.block.getDefaultState())));

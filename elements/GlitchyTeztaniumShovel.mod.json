@@ -1,0 +1,34 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "gts",
+    "customModelName": "Normal",
+    "name": "Glitchy Teztanium Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 5,
+    "efficiency": 15.0,
+    "attackSpeed": 1.0,
+    "enchantability": 25,
+    "damageVsEntity": 1.0,
+    "usageCount": 3000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:GlitchyTeztanium"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "GlitchyTeztaniumPickaxeBlockDestroyedWithTool"
+    }
+  }
+}
