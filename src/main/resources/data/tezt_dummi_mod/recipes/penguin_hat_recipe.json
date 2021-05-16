@@ -1,0 +1,29 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:penguin_hide"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:penguin_hide"
+    },
+    "2": {
+      "item": "tezt_dummi_mod:penguin_hide"
+    },
+    "3": {
+      "item": "tezt_dummi_mod:penguin_hide"
+    },
+    "5": {
+      "item": "tezt_dummi_mod:penguin_hide"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:penguin_hat",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tezt_dummi_mod:custom/sans_undertale",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/sansundertale",
+    "particle": "tezt_dummi_mod:blocks/sansundertale",
+    "0": "tezt_dummi_mod:blocks/sansundertale"
+  }
+}

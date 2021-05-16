@@ -1,0 +1,12 @@
+{
+  "_fv": 18,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "H",
+    "keyBindingName": "Hat Equip",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "HatEquipOnKeyPressed"
+    }
+  }
+}

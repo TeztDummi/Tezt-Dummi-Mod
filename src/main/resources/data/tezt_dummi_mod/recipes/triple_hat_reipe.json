@@ -1,0 +1,24 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "tezt_dummi_mod:hat"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:hat"
+    },
+    "2": {
+      "item": "tezt_dummi_mod:hat"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:triple_hat",
+    "count": 1
+  }
+}

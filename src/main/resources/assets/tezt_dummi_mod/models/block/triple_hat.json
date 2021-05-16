@@ -1,0 +1,10 @@
+{
+  "parent": "tezt_dummi_mod:custom/hats",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/hat3",
+    "particle": "tezt_dummi_mod:blocks/hat3",
+    "0": "tezt_dummi_mod:blocks/hat",
+    "1": "tezt_dummi_mod:blocks/hat2",
+    "2": "tezt_dummi_mod:blocks/hat3"
+  }
+}

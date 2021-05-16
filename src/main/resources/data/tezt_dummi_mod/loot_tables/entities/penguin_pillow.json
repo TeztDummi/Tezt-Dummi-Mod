@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tezt_dummi_mod:cooked_penguin",
+          "name": "tezt_dummi_mod:raw_penguin",
           "weight": 1,
           "functions": [
             {

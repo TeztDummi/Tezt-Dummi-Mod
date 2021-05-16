@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tezt_dummi_mod:block/tall_hat"
+    },
+    "facing=east": {
+      "model": "tezt_dummi_mod:block/tall_hat",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tezt_dummi_mod:block/tall_hat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tezt_dummi_mod:block/tall_hat",
+      "y": 270
+    }
+  }
+}

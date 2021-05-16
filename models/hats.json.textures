@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "hat",
+        "1": "hat2",
+        "2": "hat3"
+      },
+      "name": "default"
+    }
+  }
+}

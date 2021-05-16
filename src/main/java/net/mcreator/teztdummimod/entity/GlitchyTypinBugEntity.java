@@ -39,7 +39,9 @@ import java.util.Random;
 
 @TeztDummiModModElements.ModElement.Tag
 public class GlitchyTypinBugEntity extends TeztDummiModModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("glitchy_typin_bug").setRegistryName("glitchy_typin_bug");
 	public GlitchyTypinBugEntity(TeztDummiModModElements instance) {
 		super(instance, 31);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new GlitchyTypinBugRenderer.ModelRegisterHandler());
@@ -48,9 +50,6 @@ public class GlitchyTypinBugEntity extends TeztDummiModModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("glitchy_typin_bug")
-						.setRegistryName("glitchy_typin_bug");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -11730944, -26880, new Item.Properties().group(TeztDummiModItemGroup.tab))
 				.setRegistryName("glitchy_typin_bug_spawn_egg"));

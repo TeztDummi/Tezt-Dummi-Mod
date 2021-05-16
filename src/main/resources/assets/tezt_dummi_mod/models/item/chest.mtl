@@ -1,0 +1,7 @@
+newmtl Material
+Ka 1.0 1.0 1.0
+Kd 0.64 0.64 0.64
+Ks 0.0 0.0 0.0
+map_Kd tezt_dummi_mod:blocks/normal
+Ns 96.07843
+d 1.0

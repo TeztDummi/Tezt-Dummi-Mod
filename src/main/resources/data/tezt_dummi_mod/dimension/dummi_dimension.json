@@ -7,28 +7,28 @@
       "type": "minecraft:multi_noise",
       "seed": 0,
       "temperature_noise": {
-        "firstOctave": -5.11,
+        "firstOctave": -5.74,
         "amplitudes": [
           2,
           2
         ]
       },
       "humidity_noise": {
-        "firstOctave": -5.11,
+        "firstOctave": -5.74,
         "amplitudes": [
           2,
           2
         ]
       },
       "altitude_noise": {
-        "firstOctave": -5.11,
+        "firstOctave": -5.74,
         "amplitudes": [
           2,
           2
         ]
       },
       "weirdness_noise": {
-        "firstOctave": -5.11,
+        "firstOctave": -5.74,
         "amplitudes": [
           2,
           2
@@ -38,10 +38,40 @@
         {
           "biome": "tezt_dummi_mod:tezlands",
           "parameters": {
-            "temperature": 0,
-            "humidity": 0,
-            "altitude": 0,
-            "weirdness": 0,
+            "temperature": 1,
+            "humidity": -1,
+            "altitude": 0.75,
+            "weirdness": -1.5,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "tezt_dummi_mod:tezt_swamps",
+          "parameters": {
+            "temperature": 0.333333333334,
+            "humidity": -0.333333333334,
+            "altitude": -0.75,
+            "weirdness": 1.5,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "tezt_dummi_mod:icy_tezt_lands",
+          "parameters": {
+            "temperature": -0.333333333334,
+            "humidity": 0.333333333334,
+            "altitude": 0.75,
+            "weirdness": -1.5,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "tezt_dummi_mod:tezt_desert",
+          "parameters": {
+            "temperature": -1,
+            "humidity": 1,
+            "altitude": -0.75,
+            "weirdness": 1.5,
             "offset": 0
           }
         }
@@ -50,8 +80,8 @@
     "settings": {
       "name": "tezt_dummi_mod:dummi_dimension",
       "bedrock_roof_position": -10,
-      "bedrock_floor_position": -10,
-      "sea_level": 0,
+      "bedrock_floor_position": 0,
+      "sea_level": 63,
       "disable_mob_generation": true,
       "default_block": {
         "Name": "tezt_dummi_mod:tezty_rock"
@@ -60,30 +90,31 @@
         "Name": "minecraft:air"
       },
       "noise": {
-        "density_factor": 0,
-        "density_offset": 0,
+        "min_y": 0,
+        "height": 256,
+        "density_factor": 1,
+        "density_offset": -0.46875,
+        "size_horizontal": 1,
+        "size_vertical": 2,
         "simplex_surface_noise": true,
-        "random_density_offset": false,
-        "island_noise_override": true,
+        "random_density_offset": true,
+        "island_noise_override": false,
         "amplified": false,
-        "size_horizontal": 2,
-        "size_vertical": 1,
-        "height": 128,
         "sampling": {
-          "xz_scale": 2,
+          "xz_scale": 1,
           "y_scale": 1,
           "xz_factor": 80,
           "y_factor": 160
         },
         "bottom_slide": {
           "target": -30,
-          "size": 7,
-          "offset": 1
+          "size": 0,
+          "offset": 0
         },
         "top_slide": {
-          "target": -3000,
-          "size": 64,
-          "offset": -46
+          "target": -10,
+          "size": 3,
+          "offset": 0
         }
       },
       "structures": {

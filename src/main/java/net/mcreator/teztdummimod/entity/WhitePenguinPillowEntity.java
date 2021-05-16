@@ -42,7 +42,9 @@ import java.util.HashMap;
 
 @TeztDummiModModElements.ModElement.Tag
 public class WhitePenguinPillowEntity extends TeztDummiModModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(1.4f, 0.9f)).build("white_penguin_pillow").setRegistryName("white_penguin_pillow");
 	public WhitePenguinPillowEntity(TeztDummiModModElements instance) {
 		super(instance, 152);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new WhitePenguinPillowRenderer.ModelRegisterHandler());
@@ -51,9 +53,6 @@ public class WhitePenguinPillowEntity extends TeztDummiModModElements.ModElement
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1.4f, 0.9f)).build("white_penguin_pillow")
-						.setRegistryName("white_penguin_pillow");
 		elements.entities.add(() -> entity);
 	}
 

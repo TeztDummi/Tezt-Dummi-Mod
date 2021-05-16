@@ -60,7 +60,7 @@
     "biomeWeight": 10,
     "biomeDictionaryTypes": [],
     "grassPerChunk": 0,
-    "seagrassPerChunk": 20,
+    "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
     "mushroomsPerChunk": 0,
     "bigMushroomsChunk": 0,
@@ -98,8 +98,7 @@
     "oceanRuinType": "NONE",
     "defaultFeatures": [
       "Structures",
-      "Ores",
-      "FrozenTopLayer"
+      "Ores"
     ],
     "spawnEntries": []
   }

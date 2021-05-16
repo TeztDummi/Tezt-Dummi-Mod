@@ -55,7 +55,9 @@ import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 @TeztDummiModModElements.ModElement.Tag
 public class TypinBugEntity extends TeztDummiModModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("typin_bug").setRegistryName("typin_bug");
 	public TypinBugEntity(TeztDummiModModElements instance) {
 		super(instance, 29);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TypinBugRenderer.ModelRegisterHandler());
@@ -65,9 +67,6 @@ public class TypinBugEntity extends TeztDummiModModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("typin_bug")
-						.setRegistryName("typin_bug");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -26368, new Item.Properties().group(TeztDummiModItemGroup.tab))
 				.setRegistryName("typin_bug_spawn_egg"));

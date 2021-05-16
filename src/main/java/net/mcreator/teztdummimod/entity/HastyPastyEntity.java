@@ -39,7 +39,9 @@ import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 @TeztDummiModModElements.ModElement.Tag
 public class HastyPastyEntity extends TeztDummiModModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("hasty_pasty").setRegistryName("hasty_pasty");
 	public HastyPastyEntity(TeztDummiModModElements instance) {
 		super(instance, 32);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new HastyPastyRenderer.ModelRegisterHandler());
@@ -49,9 +51,6 @@ public class HastyPastyEntity extends TeztDummiModModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("hasty_pasty")
-						.setRegistryName("hasty_pasty");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -1, -16741889, new Item.Properties().group(TeztDummiModItemGroup.tab))
 				.setRegistryName("hasty_pasty_spawn_egg"));
@@ -64,7 +63,7 @@ public class HastyPastyEntity extends TeztDummiModModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 1, 1, 1));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 15, 1, 1));
 	}
 
 	@Override

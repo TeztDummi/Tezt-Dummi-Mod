@@ -1,0 +1,8 @@
+{
+  "parent": "tezt_dummi_mod:custom/tall_hat",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/tallhat",
+    "particle": "tezt_dummi_mod:blocks/tallhat",
+    "0": "tezt_dummi_mod:blocks/tallhat"
+  }
+}

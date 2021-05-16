@@ -2243,23 +2243,6 @@
       "registry_name": "penguin_hat"
     },
     {
-      "name": "PenguinHatOnBlockRightClicked",
-      "type": "procedure",
-      "sortid": 189,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "penguin_hat_on_block_right_clicked",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "BaterWucketRecipe",
       "type": "recipe",
       "sortid": 190,
@@ -2294,6 +2277,325 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "grappygoonrecipii"
+    },
+    {
+      "name": "PenguinHatRecipe",
+      "type": "recipe",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "penguin_hat_recipe"
+    },
+    {
+      "name": "WOOOOCommandExecuted",
+      "type": "procedure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "woooo_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WOOOO",
+      "type": "command",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "woooo"
+    },
+    {
+      "name": "SansHat",
+      "type": "block",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sans_hat"
+    },
+    {
+      "name": "HatEquipOnKeyPressed",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hat_equip_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TripleHat",
+      "type": "block",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "triple_hat"
+    },
+    {
+      "name": "HatEquip",
+      "type": "keybind",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hat_equip"
+    },
+    {
+      "name": "Boneyboy",
+      "type": "recipe",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "boneyboy"
+    },
+    {
+      "name": "Hat",
+      "type": "item",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hat"
+    },
+    {
+      "name": "TripleHatReipe",
+      "type": "recipe",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "triple_hat_reipe"
+    },
+    {
+      "name": "Haterecpcicice",
+      "type": "recipe",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "haterecpcicice"
+    },
+    {
+      "name": "Retardrecipe",
+      "type": "recipe",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "retardrecipe"
+    },
+    {
+      "name": "TallHat",
+      "type": "block",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tall_hat"
+    },
+    {
+      "name": "TallHatRecipe",
+      "type": "recipe",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tall_hat_recipe"
+    },
+    {
+      "name": "WhitePikman",
+      "type": "mob",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "white_pikman"
+    },
+    {
+      "name": "PurplePikman",
+      "type": "mob",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_pikman"
+    },
+    {
+      "name": "WhitePikmanOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "white_pikman_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Whaka",
+      "type": "mob",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whaka"
+    },
+    {
+      "name": "WhakaRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whaka_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Whackadoo",
+      "type": "achievement",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whackadoo"
+    },
+    {
+      "name": "SwampyTeztDummiOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "swampy_tezt_dummi_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WhackaBump",
+      "type": "food",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whacka_bump"
+    },
+    {
+      "name": "WhackaBumpFoodEaten",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whacka_bump_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeztDesert",
+      "type": "biome",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tezt_desert"
+    },
+    {
+      "name": "TeztSand",
+      "type": "block",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tezt_sand"
+    },
+    {
+      "name": "TeztSandstone",
+      "type": "block",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tezt_sandstone"
+    },
+    {
+      "name": "Sand",
+      "type": "tag",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sand"
     }
   ],
   "variable_elements": [
@@ -2478,7 +2780,9 @@
       "block.tezt_dummi_mod.teztanium_crafting_table": "Teztanium Crafting Table",
       "item.tezt_dummi_mod.key_cannon": "Key Cannon",
       "block.tezt_dummi_mod.glitchy_virtual_block": "Virtual Block",
+      "block.tezt_dummi_mod.tezt_sandstone": "Tezt Sandstone",
       "item.tezt_dummi_mod.white_penguin_pillow_spawn_egg": "White Penguin Pillow Spawn Egg",
+      "item.tezt_dummi_mod.white_pikman_spawn_egg": "White Pikman Spawn Egg",
       "item.tezt_dummi_mod.chip": "Chip",
       "block.tezt_dummi_mod.tezty_flower": "Tezty Flower",
       "block.tezt_dummi_mod.tezty_planks": "Tezty Planks",
@@ -2487,6 +2791,7 @@
       "advancements.weeeeee.title": "Weeeeee!!",
       "subtitles.typinbugnutural": "Typinbug beeps",
       "block.tezt_dummi_mod.tezt_ice": "Tezt Ice",
+      "block.tezt_dummi_mod.tezt_sand": "Tezt Sand",
       "block.tezt_dummi_mod.teztanium_ore": "Teztanium Ore",
       "item.tezt_dummi_mod.teztanium_stick": "Teztanium Stick",
       "item.tezt_dummi_mod.simulation": "Simulation Portal Igniter (Creative)",
@@ -2494,7 +2799,9 @@
       "item.tezt_dummi_mod.tezt_dummi_essence_dust": "Tezt Dummi Essence",
       "item.tezt_dummi_mod.glitchy_teztanium_shovel": "Glitchy Teztanium Shovel",
       "advancements.the_dummi_dimension.title": "The Dummi Dimension",
+      "biome.tezt_dummi_mod.tezt_desert": "Teztlands",
       "item.tezt_dummi_mod.typin_bug_spawn_egg": "Typin Bug Spawn Egg",
+      "item.tezt_dummi_mod.purple_pikman_spawn_egg": "Purple Pikman Spawn Egg",
       "advancements.the_teztlands.descr": "Nothing but green",
       "subtitles.virusblock": "Virus block glitches",
       "key.tezt_dummi_mod.typin_pickaxe_type": "Typin Pickaxe Type",
@@ -2504,10 +2811,12 @@
       "subtitles.typinbughurt": "Typinbug angrily beeps",
       "advancements.fatty.title": "Fatty",
       "item.tezt_dummi_mod.teztanium_pickaxe": "Teztanium Pickaxe",
+      "entity.tezt_dummi_mod.whaka": "Whacka",
       "block.tezt_dummi_mod.tezty_wood": "Tezty Wood",
       "item.tezt_dummi_mod.icy_tezt_dummi_spawn_egg": "Icy Tezt_Dummi Spawn Egg",
       "subtitles.bestclipever": "Best BFMI clip no doubt",
       "item.tezt_dummi_mod.glitchy_teztanium_axe": "Glitchy Teztanium Axe",
+      "item.tezt_dummi_mod.hat": "Cap",
       "item.tezt_dummi_mod.tezt_dummi_cannon": "Tezt Dummi Cannon",
       "entity.tezt_dummi_mod.hasty_pasty": "Hasty Pasty",
       "block.tezt_dummi_mod.chipped_bredrock": "Chipped Bredrock",
@@ -2522,6 +2831,7 @@
       "item.tezt_dummi_mod.swampy_tezt_dummi_spawn_egg": "Swampy Tezt_Dummi Spawn Egg",
       "item.tezt_dummi_mod.teztanium_ingot": "Teztanium Ingot",
       "item.tezt_dummi_mod.glitchy_teztanium": "Teztanium",
+      "advancements.whackadoo.title": "Whackadoo!!",
       "item.tezt_dummi_mod.dummi_dimension": "Ignitey Stick",
       "biome.tezt_dummi_mod.tezt_swamps": "Teztswamps",
       "biome.tezt_dummi_mod.simulation_plains": "Simulation Plains",
@@ -2535,6 +2845,7 @@
       "block.tezt_dummi_mod.tezty_log": "Tezty Log",
       "item.tezt_dummi_mod.penguin_hide": "Penguin Hide",
       "advancements.the_teztlands.title": "The Teztlands",
+      "block.tezt_dummi_mod.triple_hat": "Penguin Hat",
       "key.tezt_dummi_mod.penguin_pillow_flap": "Penguin Pillow Flap",
       "item.tezt_dummi_mod.teztanium_shovel": "Teztanium Shovel",
       "key.mcreator.penguin_pillow_flap": "Penguin Pillow Flap",
@@ -2571,8 +2882,11 @@
       "block.tezt_dummi_mod.big_box": "Big Box",
       "item.minecraft.lingering_potion.effect.retard": "Lingering Retard",
       "advancements.weeeeee.descr": "Craft a Tezt Dummi Cannon",
+      "item.tezt_dummi_mod.whaka_spawn_egg": "Whacka Spawn Egg",
+      "item.tezt_dummi_mod.whacka_bump": "Whacka Bump",
       "advancements.into_the_sunset.title": "Into The Sunset",
       "biome.tezt_dummi_mod.tezlands": "Teztlands",
+      "entity.tezt_dummi_mod.purple_pikman": "Purple Pikman",
       "block.tezt_dummi_mod.tezty_slab": "Tezty Slab",
       "subtitles.woooooooooo": "WOOOOOO",
       "item.tezt_dummi_mod.glitchy_teztanium_sword": "Glitchy Teztanium Sword",
@@ -2581,6 +2895,8 @@
       "subtitles.virusextract": "Virus gets extracted",
       "entity.tezt_dummi_mod.teztstegore": "Teztgore",
       "block.tezt_dummi_mod.typin_fence": "Typin Fence",
+      "block.tezt_dummi_mod.sans_hat": "Sans Hat",
+      "advancements.whackadoo.descr": "Tame a Whacka",
       "block.tezt_dummi_mod.virtual_block": "Virtual Block",
       "subtitles.typinbugdeath": "Error 404 Typinbug no longer exists",
       "subtitles.code": "Code noises",
@@ -2594,10 +2910,12 @@
       "subtitles.virtualblock": "Virtual block",
       "item.minecraft.potion.effect.retard": "Retard",
       "item.tezt_dummi_mod.typin_man_spawn_egg": "Typin Man Spawn Egg",
+      "entity.tezt_dummi_mod.white_pikman": "White Pikman",
       "biome.tezt_dummi_mod.icy_tezt_lands": "Icy Teztlands",
       "subtitles.virtualgrass": "Virtual grass",
       "block.tezt_dummi_mod.typin_fence_gate": "Typin Fence Gate",
       "item.tezt_dummi_mod.typin_pickaxe": "Typin Pickaxe",
+      "key.tezt_dummi_mod.hat_equip": "Hat Equip",
       "item.tezt_dummi_mod.teh_dummi_spawn_egg": "Tezt_Dummi Spawn Egg",
       "item.tezt_dummi_mod.teztgore_horn": "Teztgore Horn",
       "block.tezt_dummi_mod.typin_wood": "Typin Wood",
@@ -2611,6 +2929,7 @@
       "item.tezt_dummi_mod.bag_of_chips": "Bag Of Chips",
       "item.tezt_dummi_mod.hugefunny": "HUGE FUNNY",
       "item.tezt_dummi_mod.teztanium_armor_boots": "Teztanium Boots",
+      "block.tezt_dummi_mod.tall_hat": "Tall Hat",
       "block.tezt_dummi_mod.typin_stairs": "Typin Stairs",
       "itemGroup.tabtezt_dummi_mod": "Tezt Dummi Mod"
     }
@@ -2638,5 +2957,5 @@
     "modElementsPackage": "net.mcreator.teztdummimod",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100116710
+  "mcreatorVersion": 202100118117
 }

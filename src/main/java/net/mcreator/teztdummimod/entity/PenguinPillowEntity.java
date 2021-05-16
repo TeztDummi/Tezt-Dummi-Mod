@@ -50,7 +50,9 @@ import java.util.HashMap;
 
 @TeztDummiModModElements.ModElement.Tag
 public class PenguinPillowEntity extends TeztDummiModModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(1.4f, 0.9f)).build("penguin_pillow").setRegistryName("penguin_pillow");
 	public PenguinPillowEntity(TeztDummiModModElements instance) {
 		super(instance, 59);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PenguinPillowRenderer.ModelRegisterHandler());
@@ -60,9 +62,6 @@ public class PenguinPillowEntity extends TeztDummiModModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1.4f, 0.9f)).build("penguin_pillow")
-						.setRegistryName("penguin_pillow");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -3355444, new Item.Properties().group(TeztDummiModItemGroup.tab))
 				.setRegistryName("penguin_pillow_spawn_egg"));
@@ -79,7 +78,7 @@ public class PenguinPillowEntity extends TeztDummiModModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 1, 1, 3));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 25, 1, 1));
 	}
 
 	@Override

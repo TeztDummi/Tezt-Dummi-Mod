@@ -5,9 +5,18 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:Tezlands"
+      },
+      {
+        "value": "CUSTOM:TeztSwamps"
+      },
+      {
+        "value": "CUSTOM:IcyTeztLands"
+      },
+      {
+        "value": "CUSTOM:TeztDesert"
       }
     ],
-    "worldGenType": "End like gen",
+    "worldGenType": "Normal world gen",
     "mainFillerBlock": {
       "value": "CUSTOM:TeztyRock"
     },

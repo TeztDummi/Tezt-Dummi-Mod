@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "command",
+  "definition": {
+    "commandName": "spawn_me_some_tezt_dummi_you_f*cking_tard",
+    "permissionLevel": "3",
+    "onCommandExecuted": {
+      "name": "WOOOOCommandExecuted"
+    }
+  }
+}
