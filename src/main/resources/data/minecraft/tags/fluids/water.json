@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "tezt_dummi_mod:code",
-    "tezt_dummi_mod:code_flowing"
+    "tezt_dummi_mod:code_flowing",
+    "tezt_dummi_mod:acid",
+    "tezt_dummi_mod:acid_flowing"
   ]
 }

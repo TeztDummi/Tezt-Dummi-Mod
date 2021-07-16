@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "velvetacheese",
+        "1": "bowl"
+      },
+      "name": "default"
+    }
+  }
+}

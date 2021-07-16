@@ -1,0 +1,19 @@
+{
+  "group": "tezt_dummi_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:milk_bucket"
+    },
+    "1": {
+      "item": "tezt_dummi_mod:salt"
+    }
+  },
+  "result": {
+    "item": "tezt_dummi_mod:butter",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "tezt_dummi_mod:custom/teztcactus",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/cactus",
+    "particle": "tezt_dummi_mod:blocks/cactus",
+    "0": "tezt_dummi_mod:blocks/cactus"
+  }
+}

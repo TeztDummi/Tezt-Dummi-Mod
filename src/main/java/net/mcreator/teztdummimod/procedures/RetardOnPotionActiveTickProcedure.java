@@ -23,8 +23,8 @@ public class RetardOnPotionActiveTickProcedure extends TeztDummiModModElements.M
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).attackEntityFrom(new DamageSource("%1$s Forgot how to breath").setDamageBypassesArmor(), (float) 0.5);
+			((LivingEntity) entity).attackEntityFrom(new DamageSource("nobreath %1$s Forgot how to breath").setDamageBypassesArmor(), (float) 0.5);
 		}
-		entity.setMotion(0, 0, 0);
+		entity.setMotion(((entity.getMotion().getX()) / 2), ((entity.getMotion().getY()) / 2), ((entity.getMotion().getZ()) / 2));
 	}
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "tezt_dummi_mod:custom/sifternew",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/sifter",
+    "particle": "tezt_dummi_mod:blocks/sifter",
+    "0": "tezt_dummi_mod:blocks/sifter",
+    "1": "tezt_dummi_mod:blocks/sand"
+  }
+}

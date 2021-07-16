@@ -107,7 +107,14 @@
     "spawnWorldTypes": [
       "CUSTOM:Simulation"
     ],
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:SimulationHills"
+      },
+      {
+        "value": "CUSTOM:SimulationPlains"
+      }
+    ],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"

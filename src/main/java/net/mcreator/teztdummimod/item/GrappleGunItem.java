@@ -58,7 +58,7 @@ public class GrappleGunItem extends TeztDummiModModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(TeztDummiModItemGroup.tab).maxDamage(100));
+			super(new Item.Properties().group(TeztDummiModItemGroup.tab).maxDamage(50));
 			setRegistryName("grapple_gun");
 		}
 

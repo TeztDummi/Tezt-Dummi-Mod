@@ -1,0 +1,23 @@
+{
+  "_fv": 18,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "saltoverlay.png",
+          "use1Xscale": false,
+          "name": "saltoverlay.png",
+          "x": -220,
+          "y": -109
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "SaltyoverlayDisplayOverlayIngame"
+    }
+  }
+}

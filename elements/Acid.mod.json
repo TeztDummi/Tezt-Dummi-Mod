@@ -1,0 +1,33 @@
+{
+  "_fv": 18,
+  "_type": "fluid",
+  "definition": {
+    "name": "Acid",
+    "textureStill": "acid_still",
+    "textureFlowing": "acid_flow_new",
+    "luminosity": 5,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": false,
+    "type": "WATER",
+    "generateBucket": true,
+    "creativeTab": {
+      "value": "CUSTOM:TeztDummiMod"
+    },
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "onBlockAdded": {
+      "name": "AcidUpdateTick"
+    },
+    "onNeighbourChanges": {
+      "name": "AcidUpdateTick"
+    },
+    "onTickUpdate": {
+      "name": "AcidUpdateTick"
+    },
+    "onEntityCollides": {
+      "name": "AcidMobplayerCollidesBlock"
+    }
+  }
+}

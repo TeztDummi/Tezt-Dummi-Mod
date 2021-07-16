@@ -72,7 +72,7 @@ public class TehDummiEntity extends TeztDummiModModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 1000, 2, 4));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 100, 2, 4));
 	}
 
 	@Override

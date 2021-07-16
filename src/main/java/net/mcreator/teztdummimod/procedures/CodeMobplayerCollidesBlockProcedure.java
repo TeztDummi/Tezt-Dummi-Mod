@@ -105,6 +105,7 @@ public class CodeMobplayerCollidesBlockProcedure extends TeztDummiModModElements
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.portal.travel")),
 							SoundCategory.NEUTRAL, (float) 10, (float) 1, false);
 				}
+			} else {
 				if (world instanceof ServerWorld) {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
@@ -117,7 +118,36 @@ public class CodeMobplayerCollidesBlockProcedure extends TeztDummiModModElements
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 							"fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:oak_planks");
 				}
-			} else {
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"fill ~-1 ~0 ~2 ~1 ~3 ~2 minecraft:glass");
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"fill ~-1 ~0 ~-2 ~1 ~3 ~-2 minecraft:glass");
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"fill ~-2 ~0 ~1 ~-2 ~3 ~-1 minecraft:glass");
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"fill ~2 ~0 ~1 ~2 ~3 ~-1 minecraft:glass");
+				}
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"fill ~-1 ~3 ~-1 ~1 ~3 ~1 minecraft:glass");
+				}
 				{
 					Entity _ent = entity;
 					if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {

@@ -154,6 +154,13 @@ public class GlitchyVirtualBlockBlock extends TeztDummiModModElements.ModElement
 	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("tezt_dummi_mod:simulation_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("tezt_dummi_mod:simulation_plains").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);
 	}
 }

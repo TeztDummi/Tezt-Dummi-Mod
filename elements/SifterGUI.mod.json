@@ -1,0 +1,64 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 176,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 5,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 177,
+          "y": 44
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 177,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Sift",
+          "onClick": {
+            "name": "SifterCodeing"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Sift",
+          "x": 213,
+          "y": 71
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sifter_gui_4real.png",
+          "use1Xscale": false,
+          "name": "sifter_gui_4real.png",
+          "x": 125,
+          "y": 32
+        }
+      }
+    ]
+  }
+}

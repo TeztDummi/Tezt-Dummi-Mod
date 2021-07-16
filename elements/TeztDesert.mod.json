@@ -10,7 +10,7 @@
       "value": "CUSTOM:TeztSandstone"
     },
     "airColor": {
-      "value": -3342388,
+      "value": -786484,
       "falpha": 0.0
     },
     "grassColor": {
@@ -68,16 +68,16 @@
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,
     "cactiPerChunk": 1,
-    "treesPerChunk": 0,
-    "vanillaTreeType": "Savanna trees",
+    "treesPerChunk": 1,
+    "vanillaTreeType": "Birch trees",
     "treeType": 1,
-    "minHeight": 3,
+    "minHeight": 2,
     "maxWaterDepth": 0,
     "treeStem": {
-      "value": "CUSTOM:TeztyLog"
+      "value": "CUSTOM:TeztCactus"
     },
     "treeBranch": {
-      "value": "CUSTOM:TeztyLeaves"
+      "value": "Blocks.AIR"
     },
     "treeVines": {
       "value": "Blocks.AIR"

@@ -1,0 +1,9 @@
+{
+  "parent": "tezt_dummi_mod:custom/velvetabowl4",
+  "textures": {
+    "all": "tezt_dummi_mod:blocks/velvetacheese",
+    "particle": "tezt_dummi_mod:blocks/velvetacheese",
+    "0": "tezt_dummi_mod:blocks/velvetacheese",
+    "1": "tezt_dummi_mod:blocks/bowl"
+  }
+}

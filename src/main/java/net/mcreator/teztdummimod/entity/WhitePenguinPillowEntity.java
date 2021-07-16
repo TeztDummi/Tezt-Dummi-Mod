@@ -33,7 +33,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
-import net.mcreator.teztdummimod.procedures.PenguinPillowRightClickedOnEntityProcedure;
+import net.mcreator.teztdummimod.procedures.WhitePikmanRightClickedOnEntityProcedure;
 import net.mcreator.teztdummimod.entity.renderer.WhitePenguinPillowRenderer;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
@@ -132,8 +132,8 @@ public class WhitePenguinPillowEntity extends TeztDummiModModElements.ModElement
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("sourceentity", sourceentity);
-				PenguinPillowRightClickedOnEntityProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("entity", entity);
+				WhitePikmanRightClickedOnEntityProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}

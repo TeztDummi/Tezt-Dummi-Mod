@@ -8,16 +8,23 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.BiomeManager;
 
+import net.minecraft.world.gen.trunkplacer.StraightTrunkPlacer;
 import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 import net.minecraft.world.gen.treedecorator.LeaveVineTreeDecorator;
 import net.minecraft.world.gen.treedecorator.CocoaTreeDecorator;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
+import net.minecraft.world.gen.feature.TwoLayerFeature;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
 import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.FeatureSpread;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockplacer.ColumnBlockPlacer;
 import net.minecraft.world.gen.GenerationStage;
@@ -40,11 +47,14 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.teztdummimod.block.TeztSandstoneBlock;
 import net.mcreator.teztdummimod.block.TeztSandBlock;
+import net.mcreator.teztdummimod.block.TeztCactusBlock;
 import net.mcreator.teztdummimod.TeztDummiModModElements;
 
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
+
+import com.google.common.collect.ImmutableList;
 
 @TeztDummiModModElements.ModElement.Tag
 public class TeztDesertBiome extends TeztDummiModModElements.ModElement {
@@ -57,11 +67,21 @@ public class TeztDesertBiome extends TeztDummiModModElements.ModElement {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
-				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-3342388).setWaterColor(-16738048).setWaterFogColor(-16764109)
-						.withSkyColor(-3342388).withFoliageColor(-16776961).withGrassColor(-16738048).build();
+				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-786484).setWaterColor(-16738048).setWaterFogColor(-16764109)
+						.withSkyColor(-786484).withFoliageColor(-16776961).withGrassColor(-16738048).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(TeztSandBlock.block.getDefaultState(),
 								TeztSandstoneBlock.block.getDefaultState(), TeztSandstoneBlock.block.getDefaultState())));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.TREE
+						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TeztCactusBlock.block.getDefaultState()),
+								new SimpleBlockStateProvider(Blocks.AIR.getDefaultState()),
+								new BlobFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 3),
+								new StraightTrunkPlacer(2, 2, 0), new TwoLayerFeature(1, 0, 1)))
+										.setDecorators(ImmutableList.of(CustomLeaveVineTreeDecorator.instance, CustomTrunkVineTreeDecorator.instance,
+												new CustomCocoaTreeDecorator()))
+										.setMaxWaterDepth(0).build())
+						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.SEAGRASS
 						.withConfiguration(new ProbabilityConfig(0.3F)).func_242731_b(20).withPlacement(Features.Placements.SEAGRASS_DISK_PLACEMENT));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,

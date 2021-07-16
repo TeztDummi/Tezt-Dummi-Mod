@@ -71,7 +71,7 @@ public class IcyTeztDummiEntity extends TeztDummiModModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 500, 1, 2));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 50, 1, 2));
 	}
 
 	@Override

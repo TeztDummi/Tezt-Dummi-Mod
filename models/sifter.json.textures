@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "sansundertale",
+        "1": "sand"
+      },
+      "name": "default"
+    }
+  }
+}

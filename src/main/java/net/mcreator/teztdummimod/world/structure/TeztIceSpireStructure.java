@@ -54,6 +54,8 @@ public class TeztIceSpireStructure extends TeztDummiModModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == World.OVERWORLD)
 						dimensionCriteria = true;
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("tezt_dummi_mod:dummi_dimension")))
+						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
 					if ((random.nextInt(1000000) + 1) <= 500000) {

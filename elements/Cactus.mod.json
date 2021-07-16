@@ -1,0 +1,34 @@
+{
+  "_fv": 18,
+  "_type": "structure",
+  "definition": {
+    "structure": "cactus",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 500000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Ground",
+    "spawnHeightOffset": 1,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "Surface",
+      "CUSTOM:DummiDimension"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "CUSTOM:TeztSand"
+      },
+      {
+        "value": "Blocks.SAND#0"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:TeztDesert"
+      }
+    ],
+    "ignoreBlocks": "STRUCTURE_BLOCK"
+  }
+}

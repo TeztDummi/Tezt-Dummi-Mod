@@ -99,7 +99,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "onRightClickedOn": {
-      "name": "PenguinPillowRightClickedOnEntity"
+      "name": "WhitePikmanRightClickedOnEntity"
     },
     "hasAI": true,
     "aiBase": "(none)",
